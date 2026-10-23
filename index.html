@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Herizo Aimé Andriantsoa – CV</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --navy:#1a1a2e;--teal:#1D9E75;--teal-light:#E1F5EE;--coral:#D85A30;--coral-light:#FAECE7;
+  --coral2:#2755d4;--coral2-light:#c5cef4;
+  --text1:#1a1a2e;--text2:#5F5E5A;--bg:#ffffff;--bg2:#F8F9FA;--border:#e0e0dc
+}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#f0f2f5;padding:20px;min-height:100vh}
+.cv-wrap{max-width:960px;margin:0 auto;background:var(--bg);border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.09)}
+
+/* ── HERO ── */
+.hero{background:var(--navy);color:#fff;padding:36px 32px 28px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center}
+.avatar{width:88px;height:88px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:500;color:#fff;flex-shrink:0;letter-spacing:-1px;overflow:hidden;border:3px solid rgba(255,255,255,0.2)}
+.avatar img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+.hero-name{font-size:22px;font-weight:600;margin-bottom:4px}
+.hero-title{font-size:13px;opacity:.75;margin-bottom:16px;line-height:1.6}
+.hero-pills{display:flex;flex-wrap:wrap;gap:7px}
+.pill{font-size:11px;padding:3px 11px;border-radius:20px;border:0.5px solid rgba(255,255,255,.25);color:rgba(255,255,255,.85)}
+.pill-teal{background:var(--teal);border-color:var(--teal);color:#fff}
+
+/* ── TABS ── */
+.tabs{display:flex;border-bottom:0.5px solid var(--border);background:var(--bg);overflow-x:auto;scrollbar-width:none;position:sticky;top:0;z-index:10}
+.tabs::-webkit-scrollbar{display:none}
+.tab{padding:13px 18px;font-size:13px;cursor:pointer;white-space:nowrap;color:var(--text2);border-bottom:2px solid transparent;border-top:none;border-left:none;border-right:none;background:none;font-family:inherit;transition:all .2s;display:flex;align-items:center;gap:6px}
+.tab:hover{color:var(--text1)}
+.tab.active{color:var(--navy);border-bottom-color:var(--teal);font-weight:600}
+
+/* ── BODY GRID ── */
+.body{display:grid;grid-template-columns:220px 1fr}
+
+/* ── SIDEBAR ── */
+.sidebar{border-right:0.5px solid var(--border);padding:24px 16px;background:var(--bg2)}
+.s-block{margin-bottom:22px}
+.s-label{font-size:10px;text-transform:uppercase;letter-spacing:.09em;color:var(--text2);margin-bottom:10px;font-weight:600}
+.tag-grid{display:flex;flex-wrap:wrap;gap:5px}
+.tag{font-size:11px;padding:3px 9px;border-radius:12px;background:var(--teal-light);color:#085041;border:0.5px solid #5DCAA5}
+.tag-coral{background:var(--coral-light);color:#712B13;border-color:#F0997B}
+.tag-coral2{background:var(--coral2-light);color:#211990;border-color:#2755d4}
+.tag-gray{background:var(--bg);color:var(--text2);border:0.5px solid var(--border)}
+.lang-row{display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:0.5px solid var(--border);font-size:12px}
+.lang-row:last-child{border-bottom:none}
+.lang-name{font-weight:600;color:var(--text1)}
+.lang-lvl{color:var(--text2);font-size:11px}
+
+/* ── MAIN ── */
+.main-content{padding:26px 28px;background:var(--bg)}
+.section-title{font-size:15px;font-weight:600;color:var(--text1);margin-bottom:18px;display:flex;align-items:center;gap:8px}
+.section-title i{color:var(--teal);font-size:17px}
+.section-subtitle{font-size:13px;font-weight:600;color:var(--navy);margin:16px 0 10px;display:flex;align-items:center;gap:6px;border-left:3px solid var(--teal);padding-left:8px}
+
+/* ── STATS ── */
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:24px}
+.stat-card{background:var(--bg2);border-radius:10px;padding:14px;text-align:center;border:0.5px solid var(--border)}
+.stat-num{font-size:22px;font-weight:700;color:var(--navy)}
+.stat-lbl{font-size:11px;color:var(--text2);margin-top:2px}
+
+/* ── RESUME CARD ── */
+.resume-card{padding:16px;border-radius:10px;border:0.5px solid var(--border);background:var(--bg2);margin-bottom:22px;font-size:13px;color:var(--text2);line-height:1.75}
+.resume-card strong{color:var(--text1);font-weight:600}
+
+/* ── SKILL BARS ── */
+.skill-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.skill-label{font-size:12px;color:var(--text1);min-width:140px}
+.skill-bar-bg{flex:1;height:5px;background:var(--border);border-radius:3px;overflow:hidden}
+.skill-bar{height:100%;background:var(--teal);border-radius:3px}
+
+/* ── CERT ITEMS (réalisations notables) ── */
+.cert-item{display:flex;gap:12px;padding:12px;border-radius:10px;border:0.5px solid var(--border);margin-bottom:9px;align-items:flex-start}
+.cert-icon{width:34px;height:34px;border-radius:7px;background:var(--teal-light);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.cert-icon i{color:var(--teal);font-size:17px}
+.cert-icon.coral{background:var(--coral-light)}
+.cert-icon.coral i{color:var(--coral)}
+.cert-title{font-size:13px;font-weight:600;color:var(--text1);margin-bottom:2px}
+.cert-sub{font-size:11px;color:var(--text2);line-height:1.5}
+
+/* ── EXPERTISE GRID (compétences) ── */
+.expertise-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px}
+.exp-card{background:var(--bg2);border:0.5px solid var(--border);border-radius:10px;padding:14px}
+.exp-card-title{font-size:12px;font-weight:700;color:var(--navy);margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.exp-card-title i{color:var(--teal);font-size:15px}
+.exp-card ul{list-style:none;padding:0}
+.exp-card ul li{font-size:11.5px;color:var(--text2);padding:3px 0;border-bottom:0.5px solid var(--border);line-height:1.5}
+.exp-card ul li:last-child{border-bottom:none}
+.exp-card ul li strong{color:var(--text1)}
+
+/* ── PLATFORM BADGES ── */
+.platform-badge{font-size:10px;font-weight:700;padding:3px 10px;border-radius:10px;background:var(--navy);color:#fff;letter-spacing:.04em;display:inline-block;min-width:130px;text-align:center}
+.platform-badge.teal{background:var(--teal)}
+.platform-badge.coral{background:var(--coral)}
+.platform-badge.coral2{background:var(--coral2)}
+.platform-badge.gray{background:#6c757d}
+.platform-header{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+
+/* ── CERT TAGS ── */
+.cert-list{display:flex;flex-wrap:wrap;gap:5px}
+.cert-tag{font-size:10.5px;padding:3px 9px;border-radius:10px;border:0.5px solid var(--border);background:var(--bg);color:var(--text1)}
+.cert-tag[onclick]{cursor:pointer;border-color:#5DCAA5;color:var(--navy)}
+.cert-tag[onclick]:hover{background:var(--teal-light)}
+
+/* ── CERT GROUPS ── */
+.cert-group{margin-bottom:26px}
+.cert-group-title{
+  font-size:13px;font-weight:700;color:var(--navy);margin-bottom:12px;padding:8px 12px;
+  background:var(--teal-light);border-radius:8px;border:1px solid var(--teal);
+  border-left:3px solid var(--teal);display:flex;align-items:center;gap:8px;flex-wrap:wrap
+}
+.cert-group-title i{color:var(--teal);font-size:15px}
+.cert-group-title2{
+  font-size:13px;font-weight:700;color:#fff;margin-bottom:12px;padding:8px 12px;
+  background:var(--teal);border-radius:8px;border-left:3px solid #0f5533;
+  display:flex;align-items:center;gap:8px;flex-wrap:wrap
+}
+.cert-group-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.cert-platform-card{background:var(--bg2);border:0.5px solid var(--border);border-radius:10px;padding:12px}
+
+/* ── BOUTON VOIR PHOTOS ── */
+.btn-voir-photos{
+  font-size:10px;font-weight:600;padding:3px 10px;border-radius:10px;
+  background:rgba(255,255,255,0.2);color:#fff;border:0.5px solid rgba(255,255,255,0.4);
+  cursor:pointer;display:inline-flex;align-items:center;gap:4px;margin-left:auto;white-space:nowrap
+}
+.btn-voir-photos:hover{background:rgba(255,255,255,0.35)}
+
+/* ── SOUS-GROUPES (ex: CodeSignal) ── */
+.cert-subgroup{margin-bottom:3px;padding-bottom:3px;}
+.cert-subgroup:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
+.cert-subgroup-title{
+  font-size:11px;font-weight:700;color:var(--navy);
+  margin-bottom:5px;display:flex;align-items:center;gap:5px
+}
+.cert-subgroup-title::before{content:'o';color:var(--teal);font-weight:700;font-size:12px;flex-shrink:0}
+.cert-subgroup-title i{color:var(--teal);font-size:13px}
+.cert-subgroup-title[onclick]:hover{color:var(--teal);cursor:pointer}
+.cert-bullet-list{list-style:none;padding:0;margin:0 0 4px 16px}
+.cert-bullet-list li{font-size:11px;color:var(--text2);padding:2px 0;display:flex;align-items:baseline;gap:6px;line-height:1.5}
+.cert-bullet-list li::before{content:'–';color:var(--border);font-weight:700;flex-shrink:0}
+.cert-bullet-list li[onclick]{cursor:pointer}
+.cert-bullet-list li[onclick]:hover{color:var(--teal)}
+.cert-bullet-list li[onclick]::before{color:var(--teal)}
+
+/* ── TIMELINE ── */
+.timeline{position:relative;padding-left:24px}
+.timeline::before{content:'';position:absolute;left:6px;top:6px;bottom:0;width:1px;background:var(--border)}
+.tl-item{position:relative;margin-bottom:22px}
+.tl-dot{position:absolute;left:-24px;top:5px;width:13px;height:13px;border-radius:50%;background:var(--teal);border:2px solid var(--bg);box-shadow:0 0 0 1px var(--teal)}
+.tl-dot-coral{background:var(--coral);box-shadow:0 0 0 1px var(--coral)}
+.tl-date{font-size:11px;color:var(--teal);font-weight:600;margin-bottom:2px}
+.tl-date-coral{color:var(--coral)}
+.tl-title{font-size:14px;font-weight:600;color:var(--text1);margin-bottom:2px}
+.tl-org{font-size:12px;color:var(--text2);margin-bottom:5px;font-style:italic}
+.tl-desc{font-size:12px;color:var(--text2);line-height:1.65}
+.tl-desc ul{margin-left:16px;margin-top:4px}
+.tl-desc li{margin-bottom:3px}
+
+/* ── FORMATION DETAIL ── */
+.form-detail-block{background:var(--bg2);border:0.5px solid var(--border);border-radius:10px;padding:14px;margin-top:8px}
+.form-detail-row{display:flex;gap:6px;margin-bottom:5px;align-items:flex-start}
+.form-detail-row:last-child{margin-bottom:0}
+.form-detail-label{font-size:11px;font-weight:700;color:var(--teal);min-width:90px;flex-shrink:0;padding-top:1px}
+.form-detail-val{font-size:11px;color:var(--text2);line-height:1.5}
+
+/* ── REFERENCES ── */
+.ref-card{display:grid;grid-template-columns:44px 1fr;gap:10px;align-items:center;padding:12px;border-radius:10px;border:0.5px solid var(--border);margin-bottom:8px}
+.ref-init{width:44px;height:44px;border-radius:50%;background:var(--teal-light);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;color:#085041}
+.ref-name{font-size:13px;font-weight:600;color:var(--text1)}
+.ref-tel{font-size:12px;color:var(--text2);margin-top:2px}
+
+/* ── MODAL ── */
+.cert-modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.72);z-index:1000;align-items:center;justify-content:center;padding:16px;overflow-y:auto}
+.cert-modal-overlay.open{display:flex}
+.cert-modal{background:#1a1a2e;border-radius:14px;padding:16px;width:100%;max-width:860px;position:relative;box-shadow:0 8px 40px rgba(0,0,0,0.5);animation:fadeUp .25s ease;margin:auto}
+.cert-modal-close{position:absolute;top:10px;right:12px;background:rgba(255,255,255,0.15);color:#fff;border:none;border-radius:50%;width:30px;height:30px;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:1;transition:background .2s}
+.cert-modal-close:hover{background:var(--coral)}
+#certModalImgs{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:8px}
+#certModalImgs img{border-radius:8px;display:block;max-height:75vh;width:auto;max-width:100%;object-fit:contain;flex:1 1 auto;min-width:0}#certModalImgs.count-1 img{max-width:100%}
+#certModalImgs.count-2 img{max-width:48%}
+#certModalImgs.count-3 img,#certModalImgs.count-4 img{max-width:47%}
+/* ── WATERMARK SUR CERTIFICATS ── */
+.cert-img-wrap{position:relative;display:inline-block;flex:1 1 auto;min-width:0}
+.cert-watermark{
+  position:absolute;inset:0;pointer-events:none;
+  display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);
+  overflow:hidden;border-radius:8px
+}
+.cert-watermark span{
+  font-size:12px;font-weight:700;color:rgba(255,255,255,0.28);
+  white-space:nowrap;letter-spacing:.5px;text-transform:uppercase;
+  transform:rotate(-28deg);user-select:none;display:flex;align-items:center;justify-content:center;
+  text-shadow:0 1px 1px rgba(0,0,0,0.35)
+}
+/* ── PAGE LOADER ── */
+#pageLoader{position:fixed;inset:0;background:#1a1a2e;display:flex;align-items:center;justify-content:center;z-index:9999;transition:opacity .4s ease}
+#pageLoader.hidden{opacity:0;pointer-events:none}
+.loader-spinner{width:48px;height:48px;border-radius:50%;border:4px solid rgba(255,255,255,0.15);border-top-color:var(--teal);animation:spin .8s linear infinite}
+
+/* ── HIDDEN ── */
+.hidden{display:none!important}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.anim{animation:fadeUp .35s ease forwards;opacity:0}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .5s ease,transform .5s ease}
+.reveal.from-left{transform:translateX(-22px)}
+.reveal.from-right{transform:translateX(22px)}
+.reveal.from-scale{transform:scale(0.94);opacity:0}
+.reveal.visible{opacity:1;transform:translateY(0) translateX(0) scale(1)}
+@media(prefers-reduced-motion:reduce){.reveal,.anim{transition:none;animation:none;opacity:1;transform:none}}
+
+/* ── RESPONSIVE ── */
+@media(max-width:768px){
+  body{padding:0}.cv-wrap{border-radius:0}.body{grid-template-columns:1fr}
+  .sidebar{border-right:none;border-bottom:0.5px solid var(--border);display:grid;grid-template-columns:repeat(2,1fr);gap:0 20px;padding:20px 16px}
+  .s-block{margin-bottom:16px}.main-content{padding:20px 16px}.skill-label{min-width:110px}
+  .expertise-grid{grid-template-columns:1fr}.cert-group-grid{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  #certModalImgs.count-2 img,#certModalImgs.count-3 img,#certModalImgs.count-4 img{max-width:100%}
+  .cert-group-grid{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  body{padding:0}
+  .hero{grid-template-columns:1fr;gap:14px;padding:24px 16px 20px;text-align:center}
+  .avatar{margin:0 auto}.hero-pills{justify-content:center}.hero-name{font-size:18px}
+  .tabs{gap:0}.tab{padding:10px;font-size:11px;gap:3px}.tab i{display:none}
+  .body{grid-template-columns:1fr}
+  .sidebar{grid-template-columns:1fr;border-right:none;border-bottom:0.5px solid var(--border);padding:16px}
+  .stat-grid{grid-template-columns:repeat(3,1fr);gap:7px}.stat-card{padding:10px 6px}
+  .stat-num{font-size:18px}.stat-lbl{font-size:10px}
+  .expertise-grid{grid-template-columns:1fr}.main-content{padding:16px 14px}
+}
+/* Mobile : la barre latérale n'apparaît que dans l'onglet Profil, après le contenu */
+@media(max-width:768px){
+  .sidebar{order:2;border-right:none;border-bottom:none;border-top:0.5px solid var(--border)}
+  .body.no-sidebar .sidebar{display:none}
+}
+@media print{
+  body{background:white;padding:0}.tabs{display:none!important}.hidden{display:block!important}
+  .body{grid-template-columns:190px 1fr!important}
+  .sidebar{display:block!important;border-bottom:none;border-right:0.5px solid var(--border)}
+  .cv-wrap{box-shadow:none;border-radius:0}.main-content{padding:16px}
+}
+/* --- Style de base (Mobile First) --- */
+.file-link {
+  /* Aligne le texte et l'icône au centre */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center; 
+  gap: 10px;
+  
+  /* Prend toute la largeur par défaut sur mobile */
+  width: 100%; 
+  box-sizing: border-box; /* Évite que le padding ne déforme le bouton */
+  
+  /* Design */
+  background-color: #2563eb;
+  color: #ffffff;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-weight: 600;
+  font-size: 16px; /* Texte légèrement plus grand sur mobile pour l'accessibilité */
+  text-decoration: none;
+  
+  /* Espacement et confort tactile */
+  padding: 14px 24px; /* Hauteur généreuse pour les écrans tactiles */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+  
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+/* --- Effets interactifs (Généralement pour ordinateurs) --- */
+.file-link:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
+}
+
+.file-link:active {
+  transform: translateY(0);
+}
+
+/* --- Media Query : Pour les écrans plus grands (Tablettes et Ordinateurs) --- */
+@media (min-width: 480px) {
+  .file-link {
+    /* Le bouton reprend sa taille normale (s'adapte à son contenu) */
+    width: auto; 
+    font-size: 14px;
+    padding: 12px 24px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<!-- PAGE LOADER -->
+<div id="pageLoader">
+  <div style="text-align:center">
+    <div style="color:#fff;font-size:22px;font-weight:700;letter-spacing:3px;margin-bottom:18px;opacity:.85">HA</div>
+    <div class="loader-spinner"></div>
+  </div>
+</div>
+
+<!-- MODAL CERTIFICAT -->
+<div class="cert-modal-overlay" id="certModal" onclick="closeCertModal(event)">
+  <div class="cert-modal">
+    <button class="cert-modal-close" onclick="closeCertModal()">&times;</button>
+    <div id="certModalImgs"></div>
+  </div>
+</div>
+
+<div class="cv-wrap">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="avatar"><img src="photo.png" alt="Herizo Andriantsoa" onerror="this.parentElement.innerHTML='HA'"></div>
+    <div>
+      <div class="hero-name">Herizo Aimé ANDRIANTSOA</div>
+      <div class="hero-title">Expert IT &amp; Consultant · Formateur référent · Fondateur TECHXPERT</div>
+      <div class="hero-pills">
+        <span class="pill pill-teal">+10 ans d'expérience</span>
+        <span class="pill">Antananarivo, Madagascar</span>
+        <span class="pill">34 ans</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TABS -->
+  <div class="tabs">
+    <button class="tab active" onclick="switchTab(this,'profil')"><i class="ti ti-user"></i> Profil</button>
+    <button class="tab" onclick="switchTab(this,'exp')"><i class="ti ti-briefcase"></i> Expériences</button>
+    <button class="tab" onclick="switchTab(this,'formation')"><i class="ti ti-school"></i> Formation</button>
+    <button class="tab" onclick="switchTab(this,'competences')"><i class="ti ti-code"></i> Compétences</button>
+    <button class="tab" onclick="switchTab(this,'certifications')"><i class="ti ti-certificate"></i> Certifications</button>
+    <button class="tab" onclick="switchTab(this,'realisations')"><i class="ti ti-trophy"></i> Réalisations</button>
+    <button class="tab" onclick="switchTab(this,'refs')"><i class="ti ti-star"></i> Références</button>
+  </div>
+
+  <div class="body" id="cvBody">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <div class="s-block reveal from-left">
+        <div class="s-label">Contact</div>
+        <div style="font-size:12px;display:flex;flex-direction:column;gap:8px">           
+		  <div style="display:flex;gap:6px;align-items:flex-start"><i class="ti ti-phone" style="color:var(--teal);font-size:14px;margin-top:1px"></i><span style="color:var(--text2)">034 74 031 41<br>032 35 348 75</span></div>           
+		  <div style="display:flex;gap:6px;align-items:flex-start"><i class="ti ti-mail" style="color:var(--teal);font-size:14px;margin-top:1px"></i><span style="color:var(--text2);word-break:break-all">herizo.andriantsoa@gmail.com</span></div>           
+		  <div style="display:flex;gap:6px;align-items:flex-start"><i class="ti ti-map-pin" style="color:var(--teal);font-size:14px;margin-top:1px"></i><span style="color:var(--text2)">LOT H86 bis Amorondria<br>Sabotsy Namehana, Antananarivo 103</span></div>         
+		  <div style="display:flex;gap:6px;align-items:flex-start"><i class="ti ti-brand-linkedin" style="color:var(--teal);font-size:14px;margin-top:1px"></i><span style="color:var(--text2);word-break:break-all"><a href="https://linkedin.com" target="_blank" style="color:var(--text2);text-decoration:none">www.linkedin.com/in/herizo-andriantsoa-595582219</a></span></div>
+		</div>
+
+      </div>
+      <div class="s-block reveal from-left" style="transition-delay:.08s">
+        <div class="s-label">Langues</div>
+        <div class="lang-row"><span class="lang-name">Malagasy</span><span class="lang-lvl">Langue maternelle</span></div>
+        <div class="lang-row"><span class="lang-name">Français</span><span class="lang-lvl">Lu, parlé, écrit</span></div>
+        <div class="lang-row"><span class="lang-name">Anglais</span><span class="lang-lvl">Maîtrise technique</span></div>
+      </div>
+      <div class="s-block reveal from-left" style="transition-delay:.16s">
+        <div class="s-label">Technologies clés</div>
+        <div class="tag-grid">
+          <span class="tag">PHP / Symfony 7</span><span class="tag">MySQL</span><span class="tag">ReactJS</span>
+          <span class="tag">Python</span><span class="tag">HTML5 / CSS3</span><span class="tag">jQuery</span>
+          <span class="tag">AWS RDS</span><span class="tag">Linux</span><span class="tag">Java</span><span class="tag">VB.Net</span>
+        </div>
+      </div>
+      <div class="s-block">
+        <div class="s-label">IA &amp; Data</div>
+        <div class="tag-grid">
+          <span class="tag tag-coral">Prompt Engineering</span><span class="tag tag-coral">Power BI</span>
+          <span class="tag tag-coral">Machine Learning</span><span class="tag tag-coral">Data Visualisation</span>
+        </div>
+      </div>
+      <div class="s-block">
+        <div class="s-label">Modélisation</div>
+        <div class="tag-grid">
+          <span class="tag tag-gray">UML</span><span class="tag tag-gray">Merise</span><span class="tag tag-gray">Architecture logicielle</span>
+        </div>
+      </div>
+      <div class="s-block">
+        <div class="s-label">Bureautique</div>
+        <div class="tag-grid">
+          <span class="tag tag-coral2">MS Office Expert</span><span class="tag tag-coral2">Microsoft 365</span><span class="tag tag-coral2">MS Teams</span>
+        </div>
+      </div>
+      <div class="s-block">
+        <div class="s-label">Centres d'intérêt</div>
+        <div style="margin-bottom:6px;font-size:11px;color:var(--text2)">Sports</div>
+        <div class="tag-grid" style="margin-bottom:8px"><span class="tag tag-gray">Basketball</span><span class="tag tag-gray">Football</span></div>
+        <div style="margin-bottom:6px;font-size:11px;color:var(--text2)">Loisirs</div>
+        <div class="tag-grid" style="margin-bottom:8px"><span class="tag tag-gray">Musique (Orchestre)</span><span class="tag tag-gray">Documentation</span><span class="tag tag-gray">Voyages</span></div>
+        <div style="margin-bottom:6px;font-size:11px;color:var(--text2)">Nature</div>
+        <div class="tag-grid"><span class="tag tag-gray">Sorties nature</span><span class="tag tag-gray">Découverte</span></div>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+
+      <!-- === PROFIL === -->
+      <div id="tab-profil">
+        <div class="stat-grid">
+          <div class="stat-card reveal from-scale" style="transition-delay:.05s"><div class="stat-num">10+</div><div class="stat-lbl">années d'expérience</div></div>
+          <div class="stat-card reveal from-scale" style="transition-delay:.15s"><div class="stat-num">6+</div><div class="stat-lbl">postes occupés</div></div>
+          <div class="stat-card reveal from-scale" style="transition-delay:.25s"><div class="stat-num">2023</div><div class="stat-lbl">fondation TECHXPERT</div></div>
+        </div>
+        <div class="section-title reveal from-left"><i class="ti ti-user-circle"></i> Résumé professionnel</div>
+        <div class="resume-card reveal">
+          Professionnel polyvalent avec plus de <strong>10 ans d'expérience</strong>, spécialisé dans la gestion de parc informatique, le développement d'applications web et la consultance technique. Fondateur de <strong>TECHXPERT</strong>, j'allie compétences techniques avancées et <strong>expertise pédagogique</strong> pour accompagner la transformation numérique des organisations, de la conception des systèmes d'information à la formation des équipes.
+        </div>
+        <div class="section-title reveal from-left"><i class="ti ti-device-laptop"></i> Niveaux d'expertise</div>
+        <div style="margin-bottom:26px">
+          <div class="skill-row reveal" style="transition-delay:.05s"><span class="skill-label">Développement web</span><div class="skill-bar-bg"><div class="skill-bar" style="width:92%"></div></div><span style="font-size:11px;color:var(--text2);min-width:30px;text-align:right">92%</span></div>
+          <div class="skill-row reveal" style="transition-delay:.12s"><span class="skill-label">Bases de données</span><div class="skill-bar-bg"><div class="skill-bar" style="width:88%"></div></div><span style="font-size:11px;color:var(--text2);min-width:30px;text-align:right">88%</span></div>
+          <div class="skill-row reveal" style="transition-delay:.19s"><span class="skill-label">Infrastructure IT</span><div class="skill-bar-bg"><div class="skill-bar" style="width:85%"></div></div><span style="font-size:11px;color:var(--text2);min-width:30px;text-align:right">85%</span></div>
+          <div class="skill-row reveal" style="transition-delay:.26s"><span class="skill-label">Pédagogie / Formation</span><div class="skill-bar-bg"><div class="skill-bar" style="width:90%"></div></div><span style="font-size:11px;color:var(--text2);min-width:30px;text-align:right">90%</span></div>
+          <div class="skill-row reveal" style="transition-delay:.33s"><span class="skill-label">IA &amp; Data</span><div class="skill-bar-bg"><div class="skill-bar" style="width:50%"></div></div><span style="font-size:11px;color:var(--text2);min-width:30px;text-align:right">50%</span></div>
+          <div class="skill-row reveal" style="transition-delay:.40s"><span class="skill-label">Systèmes &amp; Réseaux</span><div class="skill-bar-bg"><div class="skill-bar" style="width:50%"></div></div><span style="font-size:11px;color:var(--text2);min-width:30px;text-align:right">50%</span></div>
+        </div>
+        <div class="section-title reveal from-left"><i class="ti ti-rocket"></i> Réalisations notables</div>
+        <div style="display:grid;gap:9px">
+          <div class="cert-item reveal from-right" style="transition-delay:.0s"><div class="cert-icon"><i class="ti ti-school"></i></div><div><div class="cert-title">Plateformes pédagogiques : ExcelLab, BureautiqueLab &amp; SmartQuiz (sept. 2026)</div><div class="cert-sub">Exercices Excel chronométrés avec verdict par cellule, dépôt et correction automatique de travaux Word/Excel, quiz générés par IA avec OCR et anti-fraude · IFR Ankadifotsy</div></div></div>
+          <div class="cert-item reveal from-right" style="transition-delay:.05s"><div class="cert-icon"><i class="ti ti-building-hospital"></i></div><div><div class="cert-title">Digitalisation hospitalière HJRA</div><div class="cert-sub">Système d'enregistrement des données liées aux expositions chimiques · Consultant national Santé &amp; Environnement via TECHXPERT</div></div></div>
+          <div class="cert-item reveal from-right" style="transition-delay:.14s"><div class="cert-icon coral"><i class="ti ti-file-invoice"></i></div><div><div class="cert-title">Gestion de cotisation ARO (2021) &amp; Gestion de traite SCREM (2022)</div><div class="cert-sub">Applications de gestion pour compagnies d'assurance et secteur public</div></div></div>
+          <div class="cert-item reveal from-right" style="transition-delay:.23s"><div class="cert-icon"><i class="ti ti-users"></i></div><div><div class="cert-title">Application GESTION ÉTUDIANT</div><div class="cert-sub">Conception et développement de bases de données de gestion des étudiants · Lycée SUNBEAM (Ampitatafika), IFR Ankadifotsy, Collège IFARIHY Famonjena &amp; École FJKM VINET Ambohimalaza</div></div></div>
+          <div class="cert-item reveal from-right" style="transition-delay:.32s"><div class="cert-icon coral"><i class="ti ti-map"></i></div><div><div class="cert-title">Digitalisation administrative – Monographies régionales</div><div class="cert-sub">Fianarantsoa &amp; gestion des taxes communales · Secteur public</div></div></div>
+        </div>
+      </div>
+
+      <!-- === EXPÉRIENCES === -->
+      <div id="tab-exp" class="hidden">
+        <div class="section-title"><i class="ti ti-briefcase"></i> Parcours professionnel</div>
+        <div class="timeline">
+          <div class="tl-item anim" style="animation-delay:.04s">
+            <div class="tl-dot tl-dot-coral"></div>
+            <div class="tl-date tl-date-coral">Depuis juin 2026</div>
+            <div class="tl-title">Développeur de solutions éducatives</div>
+            <div class="tl-org">Collège IFARIHY Famonjena · École FJKM VINET Ambohimalaza</div>
+            <div class="tl-desc">Création et intégration d'une base de données dédiée à la gestion des étudiants.</div>
+          </div>
+          <div class="tl-item anim" style="animation-delay:.09s">
+            <div class="tl-dot"></div>
+            <div class="tl-date">Depuis 2025</div>
+            <div class="tl-title">Responsable Parc Informatique &amp; Pédagogique</div>
+            <div class="tl-org">IFR Ankadifotsy</div>
+            <div class="tl-desc"><ul>
+              <li>Gestion globale de l'infrastructure IT et coordination pédagogique.</li>
+              <li>Conception et déploiement d'une base de données de gestion des étudiants.</li>
+              <li>Septembre 2026 : conception de trois plateformes pédagogiques, <strong>ExcelLab</strong>, <strong>BureautiqueLab</strong> et <strong>SmartQuiz</strong>.</li>
+            </ul></div>
+          </div>
+          <div class="tl-item anim" style="animation-delay:.14s">
+            <div class="tl-dot"></div>
+            <div class="tl-date">Depuis décembre 2023</div>
+            <div class="tl-title">Consultant National – Santé &amp; Environnement</div>
+            <div class="tl-org">Service Santé et Environnement via TECHXPERT</div>
+            <div class="tl-desc">Digitalisation hospitalière (HJRA) : conception et déploiement d'un système d'enregistrement des données liées aux expositions chimiques.</div>
+          </div>
+          <div class="tl-item anim" style="animation-delay:.19s">
+            <div class="tl-dot tl-dot-coral"></div>
+            <div class="tl-date tl-date-coral">Mai 2023 – Présent</div>
+            <div class="tl-title">Fondateur &amp; Gérant</div>
+            <div class="tl-org">Entreprise TECHXPERT</div>
+            <div class="tl-desc">Direction stratégique et prestations de services informatiques spécialisés : développement d'applications, conseil IT, formation.</div>
+          </div>
+          <div class="tl-item anim" style="animation-delay:.24s">
+            <div class="tl-dot"></div>
+            <div class="tl-date">2021 – 2025</div>
+            <div class="tl-title">Responsable Parc Informatique &amp; Pédagogique</div>
+            <div class="tl-org">Lycée SUNBEAM, Ampitatafika</div>
+            <div class="tl-desc">Gestion complète de l'infrastructure IT et coordination pédagogique. Enseignant en informatique et concepteur de l'application interne <em>Gestion Étudiant</em>.</div>
+          </div>
+          <div class="tl-item anim" style="animation-delay:.29s">
+            <div class="tl-dot"></div>
+            <div class="tl-date">2020 – 2021</div>
+            <div class="tl-title">Gérant &amp; Superviseur IT</div>
+            <div class="tl-org">Hôtel Grand Palais (Antarandolo) &amp; Salem Hôtel (Ambalafary)</div>
+            <div class="tl-desc">Supervision et maintenance des systèmes informatiques. Gestion opérationnelle des établissements hôteliers.</div>
+          </div>
+          <div class="tl-item anim" style="animation-delay:.34s">
+            <div class="tl-dot tl-dot-coral"></div>
+            <div class="tl-date tl-date-coral">2013 – 2022</div>
+            <div class="tl-title">Expert Développeur d'Applications (sélection)</div>
+            <div class="tl-org">Finances &amp; Assurances / Secteur Public</div>
+            <div class="tl-desc"><ul>
+              <li>Système de <strong>Gestion de Cotisation</strong> – ARO (2021)</li>
+              <li>Système de <strong>Gestion de Traite</strong> – SCREM (2022)</li>
+              <li>Digitalisation administrative : monographies régionales Fianarantsoa</li>
+              <li>Gestion des taxes communales</li>
+            </ul></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- === FORMATION === -->
+      <div id="tab-formation" class="hidden">
+        <div class="section-title"><i class="ti ti-school"></i> Formation &amp; Diplômes</div>
+        <div class="timeline">
+          <div class="tl-item anim" style="animation-delay:.04s">
+            <div class="tl-dot"></div>
+            <div class="tl-date">2025 – 2026</div>
+            <div class="tl-title">Certifications Internationales &amp; Développement Professionnel</div>
+            <div class="tl-org">Multiples plateformes · En continu</div>
+            <div class="tl-desc">
+              <div class="form-detail-block">
+                <div class="form-detail-row">
+                  <span class="form-detail-label">IA &amp; Data Science</span>
+                  <span class="form-detail-val">Prompt Engineering, Machine Learning, Power BI, Microsoft Fabric, SQL Avancé, Data Visualisation, Generative AI, IA Automation<br><em><strong>Plateformes :</strong> AIIXX, UniAthena, Microsoft, HP LIFE, HackerRank, AWS, MINDLUSTER, EDUCOURSE</em></span>
+                </div>
+                <div class="form-detail-row">
+                  <span class="form-detail-label">Développement &amp; Cloud</span>
+                  <span class="form-detail-val">Full-Stack (Python, ReactJS, Symfony 7, JS), HTML/CSS Responsive, API REST, DevOps &amp; Cloud<br><em><strong>Plateformes :</strong> CodeSignal, Simplilearn, Saylor Academy, Cisco, Microsoft, SymfonyCasts, MindLuster</em></span>
+                </div>
+                <div class="form-detail-row">
+                  <span class="form-detail-label">Leadership &amp; Innovation</span>
+                  <span class="form-detail-val">Intel Educator 4.0 (Niveaux 1–4), Méthodes Agiles, Leadership stratégique et pédagogique<br><em><strong>Badges</strong> Intel &amp; Microsoft</em></span>
+                </div>
+                <div class="form-detail-row">
+                  <span class="form-detail-label">Business &amp; Bureautique</span>
+                  <span class="form-detail-val">Management Information Systems, Data Analytics métier, Maîtrise MS Office &amp; Windows<br><em><strong>Plateformes :</strong> HP LIFE, Cursa, UniAthena</em></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tl-item anim" style="animation-delay:.09s">
+            <div class="tl-dot tl-dot-coral"></div>
+            <div class="tl-date tl-date-coral">2022</div>
+            <div class="tl-title">Autorisation d'Enseigner (AE)</div>
+            <div class="tl-org">Ministère de l'Éducation Nationale</div>
+          </div>
+          <div class="tl-item anim" style="animation-delay:.14s">
+            <div class="tl-dot"></div>
+            <div class="tl-date">2020</div>
+            <div class="tl-title">Licence Professionnelle en Informatique</div>
+            <div class="tl-org">EMIT – Université de Fianarantsoa</div>
+          </div>
+          <div class="tl-item anim" style="animation-delay:.19s">
+            <div class="tl-dot"></div>
+            <div class="tl-date">2016</div>
+            <div class="tl-title">Diplôme en Développement d'Applications et Système d'Information</div>
+          </div>
+          <div class="tl-item anim" style="animation-delay:.24s">
+            <div class="tl-dot tl-dot-coral"></div>
+            <div class="tl-date tl-date-coral">2010</div>
+            <div class="tl-title">Baccalauréat Scientifique – Série C</div>
+            <div class="tl-org">CSFX Fianarantsoa</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- === COMPÉTENCES === -->
+      <div id="tab-competences" class="hidden">
+        <div class="section-title"><i class="ti ti-cpu"></i> Expertise Technique (IT)</div>
+        <div class="expertise-grid" style="margin-bottom:24px">
+          <div class="exp-card">
+            <div class="exp-card-title"><i class="ti ti-code"></i> Développement</div>
+            <ul>
+              <li>Conception et réalisation d'<strong>applications web dynamiques</strong></li>
+              <li>Développement de <strong>logiciels métier</strong> sur mesure</li>
+              <li>Intégration d'<strong>API REST</strong> et services tiers</li>
+              <li>Architecture logicielle &amp; <strong>Méthodes Agiles</strong></li>
+            </ul>
+          </div>
+          <div class="exp-card">
+            <div class="exp-card-title"><i class="ti ti-database"></i> Bases de données</div>
+            <ul>
+              <li>Conception et <strong>modélisation</strong> (Merise, UML)</li>
+              <li>Mise en œuvre et <strong>administration de SGBD</strong></li>
+              <li>Optimisation des requêtes &amp; <strong>performance</strong></li>
+              <li>Migration et <strong>intégrité des données</strong></li>
+            </ul>
+          </div>
+          <div class="exp-card">
+            <div class="exp-card-title"><i class="ti ti-server"></i> Infrastructure</div>
+            <ul>
+              <li>Maintenance <strong>Hardware &amp; Software</strong></li>
+              <li>Administration réseaux <strong>LAN et Internet</strong></li>
+              <li>Gestion de parc informatique</li>
+              <li>Cloud &amp; virtualisation (<strong>AWS, Linux</strong>)</li>
+            </ul>
+          </div>
+          <div class="exp-card">
+            <div class="exp-card-title"><i class="ti ti-photo"></i> Multimédia</div>
+            <ul>
+              <li>Traitement vidéo et <strong>post-production</strong></li>
+              <li>Retouche et <strong>traitement photo</strong></li>
+              <li>Conception de contenus <strong>audiovisuels</strong></li>
+            </ul>
+          </div>
+        </div>
+        <div class="section-title"><i class="ti ti-chalkboard"></i> Expertise Pédagogique</div>
+        <div style="display:grid;gap:9px;margin-bottom:24px">
+          <div class="cert-item"><div class="cert-icon"><i class="ti ti-presentation"></i></div><div><div class="cert-title">Formation informatique</div><div class="cert-sub">Bureautique, maintenance et multimédia — conception et animation de formations pour apprenants de tous niveaux</div></div></div>
+          <div class="cert-item"><div class="cert-icon coral"><i class="ti ti-route"></i></div><div><div class="cert-title">Ingénierie de formation</div><div class="cert-sub">Conception de séquences pédagogiques structurées · Maîtrise des méthodes d'apprentissage actif et hybride</div></div></div>
+          <div class="cert-item"><div class="cert-icon"><i class="ti ti-clipboard-check"></i></div><div><div class="cert-title">Évaluation des acquis</div><div class="cert-sub">Mesure et suivi des apprentissages · Formats d'évaluation variés · Intel Educator 4.0 Niv. 1–4</div></div></div>
+        </div>
+        <div class="section-title"><i class="ti ti-tool"></i> Connaissances Techniques détaillées</div>
+        <div class="section-subtitle"><i class="ti ti-brand-html5"></i> Développement Web &amp; Frameworks</div>
+        <div style="margin-bottom:16px">
+          <div style="display:flex;gap:8px;margin-bottom:8px;align-items:center;flex-wrap:wrap">
+            <span style="font-size:11px;font-weight:700;color:var(--text2);min-width:50px">Front :</span>
+            <span class="tag">HTML5 / CSS3 (Responsive)</span><span class="tag">JavaScript</span><span class="tag">jQuery</span><span class="tag">ReactJS</span>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+            <span style="font-size:11px;font-weight:700;color:var(--text2);min-width:50px">Back :</span>
+            <span class="tag">PHP</span><span class="tag">Symfony 7</span><span class="tag">Python</span><span class="tag">API REST</span>
+          </div>
+        </div>
+        <div class="section-subtitle"><i class="ti ti-terminal-2"></i> Programmation &amp; Logiciel</div>
+        <div class="tag-grid" style="margin-bottom:16px">
+          <span class="tag">Java</span><span class="tag">C / C++</span><span class="tag">VB.Net</span><span class="tag">Architecture logicielle</span><span class="tag">Méthodes Agiles</span>
+        </div>
+        <div class="section-subtitle"><i class="ti ti-cloud"></i> Systèmes, Réseaux &amp; Cloud</div>
+        <div class="tag-grid" style="margin-bottom:16px">
+          <span class="tag tag-coral">AWS (RDS)</span><span class="tag tag-coral">Cloud Infrastructure</span><span class="tag tag-coral">Networking (Cisco)</span><span class="tag tag-coral">Windows</span><span class="tag tag-coral">Linux</span>
+        </div>
+        <div class="section-subtitle"><i class="ti ti-database"></i> Bases de données (SGBD)</div>
+        <div class="tag-grid" style="margin-bottom:16px">
+          <span class="tag">MySQL (Avancé)</span><span class="tag">SQL Server</span><span class="tag">MS Access</span><span class="tag">UML</span><span class="tag">Merise</span>
+        </div>
+        <div class="section-subtitle"><i class="ti ti-briefcase"></i> Bureautique &amp; Productivité</div>
+        <div class="tag-grid" style="margin-bottom:16px">
+          <span class="tag tag-coral2">MS Office Expert (Excel, Teams)</span><span class="tag tag-coral2">Microsoft 365</span><span class="tag tag-coral2">OneNote</span><span class="tag tag-coral2">PowerPoint Recorder</span>
+        </div>
+        <div class="section-subtitle"><i class="ti ti-brain"></i> IA &amp; Data</div>
+        <div class="tag-grid">
+          <span class="tag tag-coral">Prompt Engineering</span><span class="tag tag-coral">Machine Learning</span><span class="tag tag-coral">Power BI</span><span class="tag tag-coral">Microsoft Fabric</span><span class="tag tag-coral">Data Visualisation</span><span class="tag tag-coral">Python Pandas</span><span class="tag tag-coral">Génération de quiz par IA</span>
+        </div>
+      </div>
+
+      <!-- === CERTIFICATIONS === -->
+      <div id="tab-certifications" class="hidden">
+        <div class="section-title"><i class="ti ti-certificate"></i> Certificats par domaine<a href="certificat.pdf" class="file-link" download>certificat.pdf</a></div>
+
+        <!-- GROUPE 1 : Développement -->
+        <div class="cert-group anim" style="animation-delay:.03s">
+          <div class="cert-group-title"><i class="ti ti-code"></i> Développement Web &amp; Frameworks</div>
+          <div class="cert-group-grid">
+
+            <!-- CODESIGNAL avec sous-groupes -->
+            <div class="cert-platform-card">
+              <div class="platform-header"><span class="platform-badge" style="background:#7B2D8B">CODESIGNAL</span></div>
+              <div class="cert-subgroup">
+                <div class="cert-subgroup-title" onclick="openCertModal('photo/CODESIGNAL Comprehensive Introduction to Front-End Engineering.png')"><i class="ti ti-layout"></i> Front-end engineering</div>
+                  <div class="cert-list">
+					<span class="cert-tag" onclick="openCertModal('photo/CODESIGNAL Introduction to HTML.png')">HTML</span>
+					<span class="cert-tag" onclick="openCertModal('photo/CODESIGNAL Basics of CSS.png')">CSS</span>
+					<span class="cert-tag" onclick="openCertModal('photo/CODESIGAL Introduction to JavaScript for Front-End Engineers.png')">JavaScript</span>
+					<span class="cert-tag" onclick="openCertModal('photo/CODESIGNAL Mastering the DOM API.png')">Mastering the DOM API</span>
+					<span class="cert-tag" onclick="openCertModal('photo/CODESIGNAL Communicating with APIs for Front-End Engineers.png')">APIs for Front-End</span>
+					<span class="cert-tag" onclick="openCertModal('photo/CODESIGNAL Introduction to Responsive Web Development.png')">Responsive Web Development</span>
+                  </div>
+              </div>
+              <div class="cert-subgroup">
+                <div class="cert-subgroup-title" onclick="openCertModal('photo/codesignal Implementing ToDo App with PHP Symfony')"><i class="ti ti-brand-symfony"></i> PHP Symfony</div>
+				   <div class="cert-list">
+					  <span class="cert-tag" onclick="openCertModal('photo/CODESIGNAL Symfony Basics.png')">Symfony Basics</span>
+					  <span class="cert-tag" onclick="openCertModal('photo/CODESIGNAL Using REST API to Build ToDo App with Symfony.png')">REST API with Symfony</span>
+					  <span class="cert-tag" onclick="openCertModal('photo/CODESIGNAL Adding Enterprise Features to your Symfony App.png')">Symfony Enterprise</span>
+					  <span class="cert-tag" onclick="openCertModal('photo/codesignal Securing Your Symfony App.png')">Securing</span>
+				   </div>
+              </div>
+            </div>
+
+            <!-- SIMPLILEARN -->
+            <div class="cert-platform-card">
+              <div class="platform-header"><span class="platform-badge" style="background:#F26522">SIMPLILEARN</span></div>
+              <div class="cert-list">
+                <span class="cert-tag" onclick="openCertModal('photo/SIMPLILEARN Web Designing Basics.jpg')">Web Designing Basics</span>
+                <span class="cert-tag" onclick="openCertModal('photo/SIMPLILEARN Introduction to Front End Development.jpg')">Front End Development</span>
+                <span class="cert-tag" onclick="openCertModal('photo/SIMPLILEARN Full-Stack Development 101.jpg')">Full-Stack Development</span>
+                <span class="cert-tag" onclick="openCertModal('photo/SIMPLILEARN Python for Beginners.jpg')">Python for Beginners</span>
+                <span class="cert-tag" onclick="openCertModal('photo/SIMPLILEARN Python Pandas Basics Course.jpg')">Python Pandas Basics</span>
+                <span class="cert-tag" onclick="openCertModal('photo/SIMPLILEARN ReactJS for Beginners.jpg')">ReactJS for Beginners</span>
+                <span class="cert-tag" onclick="openCertModal('photo/SIMPLILEARN Getting Started with ReactJS Components.jpg')">ReactJS Components</span>
+                <span class="cert-tag" onclick="openCertModal('photo/SIMPLILEARN Introduction to Computer Networking.jpg')">Computer Networking</span>
+              </div>
+            </div>
+
+            <!-- SYMFONYCASTS -->
+            <div class="cert-platform-card">
+              <div class="platform-header"><span class="platform-badge teal">SYMFONYCASTS</span></div>
+              <div class="cert-list">
+                <span class="cert-tag" onclick="openCertModal('photo/SYMFONY CASTS Cosmic coding with symfony 7.jpg')">Cosmic Coding with Symfony 7</span>
+              </div>
+            </div>
+
+            <!-- MINDLUSTER -->
+            <div class="cert-platform-card">
+              <div class="platform-header"><span class="platform-badge gray">MINDLUSTER</span></div>
+              <div class="cert-list">
+                <span class="cert-tag" onclick="openCertModal('photo/MINDLUSTER Symfony professionalism.jpg')">Symfony Professionalism</span>
+                <span class="cert-tag" onclick="openCertModal('photo/Mindluster advanced SQL Programming.jpg')">Advanced SQL Programming</span>
+              </div>
+            </div>
+
+            <!-- CURSA -->
+            <div class="cert-platform-card">
+              <div class="platform-header"><span class="platform-badge coral2">CURSA</span></div>
+              <div class="cert-list">
+                <span class="cert-tag" onclick="openCertModal('photo/CURSA CERTIFICAT front end.png')">Développement Front-end</span>
+                <span class="cert-tag" onclick="openCertModal('photo/CURSA CERTIFICAT BD sql.png','photo/CURSA CERTIFICAT Mysql.png')">SQL &amp; MySQL (Avancé)</span>
+                <span class="cert-tag" onclick="openCertModal('photo/CURSA CERTIFICAT excel.png')">Excel</span>
+                <span class="cert-tag" onclick="openCertModal('photo/CURSA certificat ACCESS.png')">MS Access</span>
+                <span class="cert-tag" onclick="openCertModal('photo/CURSA  certificat SE.png')">S.E.</span>
+              </div>
+            </div>
+
+            <!-- FUTURE LEARN -->
+            <div class="cert-platform-card">
+              <div class="platform-header"><span class="platform-badge" style="background:#7B2D8B">FUTURE LEARN</span></div>
+              <div class="cert-list">
+                <span class="cert-tag" onclick="openCertModal('photo/FUTURELEARN artificial intelligence.jpg')">Digital Skills: AI</span>
+                <span class="cert-tag" onclick="openCertModal('photo/FUTURELEARN digital-skill-web-analytics.jpg')">Digital Skills: Web Analytics</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- GROUPE 2 : IA & Data -->
+        <div class="cert-group anim" style="animation-delay:.09s">
+          <div class="cert-group-title"><i class="ti ti-brain"></i> IA &amp; Data Science</div>
+          <div class="cert-group-grid">
+
+            <!-- AIIXX -->
+            <div class="cert-platform-card">
+              <div class="platform-header"><span class="platform-badge coral">AIIXX</span></div>
+              <div class="cert-list">
+                <span class="cert-tag" onclick="openCertModal('photo/AI IXX Prompt Engineering.jpg')">Prompt Engineering AI</span>
+                <span class="cert-tag" onclick="openCertModal('photo/AI IXX Synthesia.jpg')">Synthesia AI</span>
+                <span class="cert-tag" onclick="openCertModal('photo/AI IXX How to Write Killer Content with AI.jpg')">Killer Content with AI</span>
+              </div>
+            </div>
+
+            <!-- UNIATHENA -->
+            <div class="cert-platform-card">
+              <div class="platform-header"><span class="platform-badge coral">UNIATHENA</span></div>
+              <div class="cert-list">
+                <span class="cert-tag" onclick="openCertModal('photo/UNIATHENA certificate Basics of Data Science.jpg')">Data Science</span>
+                <span class="cert-tag" onclick="openCertModal('photo/UNIATHENA certificate Basics of Artificial Intelligence Learnings Models.jpg')">Intelligence Artificielle</span>
+                <span class="cert-tag" onclick="openCertModal('photo/UNIATHENA certificate Basics of Machine Learning.jpg')">Machine Learning</span>
+                <span class="cert-tag" onclick="openCertModal('photo/UNIATHENA certificate sql aggregate functions & joins.jpg','photo/UNIATHENA certificate sql statements & index.jpg','photo/UNIATHENA certificate sql stored procedures.jpg','photo/UNIATHENA certificate Essentials of Data Visualization using MS Excel.jpg')">SQL Avancé &amp; Data Viz</span>
+                <span class="cert-tag" onclick="openCertModal('photo/UNIATHENA certificate Essentials of MS Excel - Formulas.jpg')">MS Excel</span>
+              </div>
+            </div>
+
+            <!-- HP LIFE -->
+            <div class="cert-platform-card">
+              <div class="platform-header"><span class="platform-badge" style="background:#0096D6">HP LIFE</span></div>
+              <div class="cert-list">
+                <span class="cert-tag" onclick="openCertModal('photo/HP LIFE IA pour les debutants.jpg','photo/HP LIFE La pensee critique a ere de IA.jpg','photo/HP LIFE IA pour les professionnels.jpg')">L'IA débutants/professionnels/Pensée critique</span>
+                <span class="cert-tag" onclick="openCertModal('photo/HP LIFE informatique au service de mon entreprise.jpg')">Informatique &amp; Entreprise</span>
+                <span class="cert-tag" onclick="openCertModal('photo/HP LIFE Reseautage professionnel pour evolution de carriere.jpg')">Réseautage professionnel</span>
+				<span class="cert-tag" onclick="openCertModal('photo/HP LIFE Sciences et analyses des donnees.jpg')">Sciences &amp; Analyse des données</span>
+              </div>
+            </div>
+
+            <!-- HACKERRANK -->
+            <div class="cert-platform-card">
+              <div class="platform-header"><span class="platform-badge" style="background:#2EC866">HACKERRANK</span></div>
+              <div class="cert-list">
+                <span class="cert-tag" onclick="openCertModal('photo/HACKERRANK sql_advanced certificate.jpg')">SQL Advanced</span>
+              </div>
+            </div>
+
+            <!-- SIMPLILEARN IA -->
+            <div class="cert-platform-card">
+              <div class="platform-header"><span class="platform-badge" style="background:#F26522">SIMPLILEARN – IA</span></div>
+              <div class="cert-list">
+                <span class="cert-tag" onclick="openCertModal('photo/SIMPLILEARN Prompt Engineering Applications.jpg')">Prompt Engineering Applications</span>
+              </div>
+            </div>
+			<!-- EDUCOURSE -->
+            <div class="cert-platform-card">
+              <div class="platform-header"><span class="platform-badge coral">EDUCOURSE</span></div>
+              <div class="cert-list">
+                <span class="cert-tag" onclick="openCertModal('photo/EDUCOURSE IAAutomation.jpg')">IA Automation</span>
+              </div>
+            </div>
+			<!-- MINDLUSTER -->
+            <div class="cert-platform-card">
+              <div class="platform-header"><span class="platform-badge gray">MINDLUSTER</span></div>
+              <div class="cert-list">
+                <span class="cert-tag" onclick="openCertModal('photo/Mindluster Generative AI and prompt engineering')">AI Generative and prompt engineering</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- GROUPE 3 : Systèmes, Réseaux & Cloud -->
+        <div class="cert-group anim" style="animation-delay:.15s">
+          <div class="cert-group-title"><i class="ti ti-cloud"></i> Systèmes, Réseaux &amp; Cloud</div>
+          <div class="cert-group-grid">
+
+            <div class="cert-platform-card">
+              <div class="platform-header"><span class="platform-badge" style="background:#1BA0D7">CISCO ACADEMY</span></div>
+              <div class="cert-list">
+                <span class="cert-tag" onclick="openCertModal('photo/CISCO ACADEMY  Networking_Basics.jpg')">Networking Basics</span>
+                <span class="cert-tag" onclick="openCertModal('photo/CISCO ACADEMY Network_Addressing_and_Basic_Troubleshooting.jpg')">Network Addressing/Troubleshooting</span>
+              </div>
+            </div>
+
+            <div class="cert-platform-card">
+              <div class="platform-header"><span class="platform-badge" style="background:#FF9900;color:#000">AWS</span></div>
+              <div class="cert-list">
+                <span class="cert-tag" onclick="openCertModal('photo/AWS Amazon RDS for SQL Server.jpg')">Amazon RDS for SQL Server</span>
+              </div>
+            </div>
+
+            <div class="cert-platform-card">
+              <div class="platform-header"><span class="platform-badge gray">SAYLOR ACADEMY</span></div>
+              <div class="cert-list">
+                <span class="cert-tag" onclick="openCertModal('photo/SAYLOR academy certifcat Computer Architecture.jpg')">Computer Architecture</span>
+				<span class="cert-tag" onclick="openCertModal('photo/saylor  academy Management Information Systems.jpg')">Management Information Systems</span>
+                <span class="cert-tag" onclick="openCertModal('photo/SAYLOR academy certifcat Computer Communications and Networks.jpg')">Computer Communications &amp; Networks</span>
+                <span class="cert-tag" onclick="openCertModal('photo/SAYLOR academy certifcat Modern Database Systems.jpg')">Modern Database Systems</span>
+                <span class="cert-tag" onclick="openCertModal('photo/SAYLOR academy certifcat Software Engineering.jpg')">Software Engineering</span>
+                
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- BADGES MICROSOFT -->
+        <div class="cert-group anim" style="animation-delay:.21s">
+          <div class="cert-group-title2">
+            <i class="ti ti-rosette"></i> Badges Microsoft
+            <span class="btn-voir-photos" onclick="openCertModal('photo/Microsoft Learn IA pour les enseignants.jpg','photo/Microsoft Learn Leadership dans lespace de travail moderne.jpg','photo/Microsoft Learn Microsoft Educator Academy.jpg','photo/Microsoft Learn Preparer des donnees a des fins danalyse avec Power BI.jpg','photo/Microsoft Learn Presentation de linfrastructure cloud.jpg','photo/Microsoft Learn Prise en main de lAnalytique donnees Microsoft.jpg')">
+              <i class="ti ti-photo" style="font-size:12px"></i> Voir badges
+            </span>
+          </div>
+          <div class="cert-group-grid">
+            <div class="cert-platform-card">
+              <div class="platform-header"><span class="platform-badge coral2">Leadership &amp; Espace de travail</span></div>
+              <div class="cert-list">
+                <span class="cert-tag">- Leadership pédagogique<br>- Direction de l'organisation<br>- Leadership culturel inclusif<br>- Leadership stratégique<br>- Conception apprentissage 21e siècle</span>
+              </div>
+            </div>
+            <div class="cert-platform-card">
+              <div class="platform-header"><span class="platform-badge coral2">IA pour les enseignants</span></div>
+              <div class="cert-list">
+                <span class="cert-tag">- Microsoft 365 Copilot Chat<br>- Outils IA Microsoft pour apprenant<br>- IA gratuits Microsoft Éducation<br>- otentiel de l'IA pour enseignants</span>
+              </div>
+            </div>
+            <div class="cert-platform-card">
+              <div class="platform-header"><span class="platform-badge coral2">Microsoft Educator Academy</span></div>
+              <div class="cert-list">
+                <span class="cert-tag">- Apprentissage inclusif<br>- Salle de classe inclusive<br>- Microsoft Teams Éducation<br>- PowerPoint Recorder<br>- OneNote pour l'éducation</span>
+              </div>
+            </div>
+            <div class="cert-platform-card">
+			  <div class="platform-header"><span class="platform-badge coral2">Power BI &amp; Fabric</span></div>
+
+			  <div class="cert-subgroup">
+				<div class="cert-subgroup-title"><i class="ti ti-chart-bar"></i> Power BI</div>
+				<div class="cert-list">
+				  <span class="cert-tag">- Analyse de données<br>- Créer avec Power BI<br>- États interactifs &amp; Copilot<br>- Obtenir &amp; transformer des données<br>- Framework de modèle</span>
+				</div>
+			  </div>
+
+			  <div class="cert-subgroup">
+				<div class="cert-subgroup-title"><i class="ti ti-layers"></i> Microsoft Fabric</div>
+				<div class="cert-list">
+				  <span class="cert-tag">- Analytique bout en bout</span>
+				</div>
+			  </div>
+
+			</div>
+            <div class="cert-platform-card">
+              <div class="platform-header"><span class="platform-badge coral2">Infrastructure Cloud</span></div>
+              <div class="cert-list">
+                <span class="cert-tag">- Décrire le cloud computing<br>- Avantages des services cloud<br>- Types de services cloud</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BADGES INTEL -->
+        <div class="cert-group anim" style="animation-delay:.27s">
+          <div class="cert-group-title2">
+            <i class="ti ti-rosette"></i> Badges Intel Educator 4.0
+            <span class="btn-voir-photos" onclick="openCertModal('photo/INTEL Level 1 Adapter of Technology.jpg','photo/INTEL LEVEL 2 Course 1 - Introduction to Learning Remotely.jpg','photo/INTEL LEVEL 2 Course 2 - Establishing Effective Educator-Machine Partnerships.jpg','photo/INTEL LEVEL 2 Course 3 - Fostering Student Engagement in the Age of Digital Distraction.jpg','photo/INTEL LEVEL 2 Course 4 - Strengthening Real World Relevance in the Classroom.jpg','photo/INTEL LEVEL 3 Course 1 - Analytical Thinking Through Data.jpg','photo/INTEL LEVEL 3 Course 2 - Critical Reasoning to Make Better Decisions.jpg','photo/INTEL LEVEL 3 Course 3 - Bridging the Creativity Gap.jpg')">
+              <i class="ti ti-photo" style="font-size:12px"></i> Voir badges
+            </span>
+          </div>
+          <div class="cert-group-grid">
+            <div class="cert-platform-card">
+			  <div class="platform-header"><span class="platform-badge" style="background:#0068B5">LEVEL 1 – Adapter of Technology</span></div>
+			  <div class="cert-list">
+				<span class="cert-tag">- Technology in the Classroom<br>- Computer &amp; Internet Basics<br>- Multimedia &amp; Video<br>- Word Processing &amp; Spreadsheets<br>- Collaborative Workspaces</span>
+			  </div>
+			</div>
+            <div class="cert-platform-card">
+			  <div class="platform-header"><span class="platform-badge" style="background:#0068B5">LEVEL 2 – Leader of Learning Experiences</span></div>
+			  <div class="cert-list">
+				<span class="cert-tag">- Introduction to Learning Remotely<br>- Educator Machine Partnerships<br>- Student Engagement in Digital Age<br>- Real World Relevance in Classroom</span>
+			  </div>
+			</div>
+            <div class="cert-platform-card">
+              <div class="platform-header"><span class="platform-badge" style="background:#0068B5">LEVEL 3 – Catalyst of Creative Confidence</span></div>
+              <div class="cert-list">
+                <span class="cert-tag">- Analytical Thinking Through Data<br>- Critical Reasoning &amp; Decisions<br>- Bridging the Creativity Gap</span>
+              </div>
+            </div>
+            <div class="cert-platform-card">
+              <div class="platform-header"><span class="platform-badge" style="background:#0068B5">LEVEL 4 – Mentor of Upgraded Mindsets</span></div>
+              <div class="cert-list">
+                <span class="cert-tag">- Waterfall to Agile Mindset<br>- Operational to Strategic Thinking<br>- Follower to Entrepreneurial Mindset</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /tab-certifications -->
+
+      <!-- === RÉALISATIONS === -->
+      <div id="tab-realisations" class="hidden">
+        <div class="section-title"><i class="ti ti-trophy"></i> Réalisations &amp; Activités diverses</div>
+        <div class="timeline">
+          <div class="tl-item anim" style="animation-delay:.04s">
+            <div class="tl-dot tl-dot-coral"></div>
+            <div class="tl-date tl-date-coral">2015 – 2025</div>
+            <div class="tl-title">Événementiel &amp; Culture</div>
+            <div class="tl-org">Concepteur de concours culturels</div>
+            <div class="tl-desc">Conception et organisation des concours <strong>COUP DE CŒUR</strong>, <em>Kalo ho an'i Dada</em> et <em>M'ZIK</em>.</div>
+          </div>
+          <div class="tl-item anim" style="animation-delay:.09s">
+            <div class="tl-dot"></div>
+            <div class="tl-date">2015 – 2018</div>
+            <div class="tl-title">Consultant terrain &amp; Étude</div>
+            <div class="tl-org">Enquêteur JB</div>
+            <div class="tl-desc">Réalisation de l'étude <em>Baseline Study on Private Security Regulation in Madagascar</em> à Fianarantsoa Ville. Sensibilisation pour les projets <strong>PROSPERER</strong> et <strong>C.I.</strong></div>
+          </div>
+          <div class="tl-item anim" style="animation-delay:.14s">
+            <div class="tl-dot"></div>
+            <div class="tl-date">2015 – 2020</div>
+            <div class="tl-title">Caissier</div>
+            <div class="tl-org">LA CORIANDRE Fianarantsoa</div>
+            <div class="tl-desc">Gestion de caisse et suivi comptable au quotidien.</div>
+          </div>
+          <div class="tl-item anim" style="animation-delay:.19s">
+            <div class="tl-dot tl-dot-coral"></div>
+            <div class="tl-date tl-date-coral">2012 – 2017</div>
+            <div class="tl-title">Animateur Environnemental</div>
+            <div class="tl-org">Maneva Malagasy Club</div>
+            <div class="tl-desc">Leadership, encadrement de colonies de vacances et sensibilisation écologique auprès des jeunes.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- === RÉFÉRENCES === -->
+      <div id="tab-refs" class="hidden">
+        <div class="section-title"><i class="ti ti-star"></i> Références professionnelles</div>
+        <div class="ref-card">
+          <div class="ref-init">LS</div>
+          <div><div class="ref-name">Lycée SUNBEAM</div><div class="ref-tel"><i class="ti ti-phone" style="font-size:12px"></i> 034 43 150 48</div></div>
+        </div>
+        <div class="ref-card">
+          <div class="ref-init">LC</div>
+          <div><div class="ref-name">La Coriandre</div><div class="ref-tel"><i class="ti ti-phone" style="font-size:12px"></i> 034 49 449 88</div></div>
+        </div>
+        <div class="ref-card">
+          <div class="ref-init">SS</div>
+          <div><div class="ref-name">SSENV</div><div class="ref-tel"><i class="ti ti-phone" style="font-size:12px"></i> 034 03 644 03</div></div>
+        </div>
+      </div>
+
+    </div><!-- /main-content -->
+  </div><!-- /body -->
+</div><!-- /cv-wrap -->
+
+<script>
+var TABS = ['profil','exp','formation','competences','certifications','realisations','refs'];
+
+/* ── Modal certificat ── */
+var WATERMARK_TEXT = 'Herizo ANDRIANTSOA';
+
+function buildWatermarkOverlay() {
+  var overlay = document.createElement('div');
+  overlay.className = 'cert-watermark';
+  for (var i = 0; i < 9; i++) {
+    var span = document.createElement('span');
+    span.textContent = WATERMARK_TEXT;
+    overlay.appendChild(span);
+  }
+  return overlay;
+}
+
+function openCertModal() {
+  var imgs = Array.from(arguments);
+  var container = document.getElementById('certModalImgs');
+  container.innerHTML = '';
+  container.className = 'count-' + Math.min(imgs.length, 4);
+  imgs.forEach(function(src) {
+    var wrap = document.createElement('div');
+    wrap.className = 'cert-img-wrap';
+
+    var img = document.createElement('img');
+    img.src = src;
+    img.alt = 'Certificat';
+    img.draggable = false;
+
+    wrap.appendChild(img);
+    wrap.appendChild(buildWatermarkOverlay());
+    container.appendChild(wrap);
+  });
+  document.getElementById('certModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeCertModal(e) {
+  if (!e || e.target === document.getElementById('certModal')) {
+    document.getElementById('certModal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeCertModal({ target: document.getElementById('certModal') });
+});
+
+/* ── Page loader ── */
+window.addEventListener('load', function() {
+  var loader = document.getElementById('pageLoader');
+  loader.classList.add('hidden');
+  setTimeout(function() { loader.style.display = 'none'; }, 400);
+});
+
+/* ── IntersectionObserver reveal ── */
+var revealObserver = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+function observeReveals(scope) {
+  var s = scope || document;
+  s.querySelectorAll('.reveal:not(.visible)').forEach(function(el) {
+    revealObserver.observe(el);
+  });
+}
+document.addEventListener('DOMContentLoaded', function() { observeReveals(); });
+
+/* ── Tab switching ── */
+function switchTab(btn, id) {
+  document.querySelectorAll('.tab').forEach(function(t) { t.classList.remove('active'); });
+  btn.classList.add('active');
+  document.getElementById('cvBody').classList.toggle('no-sidebar', id !== 'profil');
+  TABS.forEach(function(t) {
+    var el = document.getElementById('tab-' + t);
+    if (el) el.classList.toggle('hidden', t !== id);
+  });
+  var items = document.querySelectorAll('#tab-' + id + ' .tl-item, #tab-' + id + ' .anim');
+  items.forEach(function(item, i) {
+    item.style.animation = 'none';
+    void item.offsetWidth;
+    item.style.animation = 'fadeUp .35s ease ' + (i * 0.05) + 's forwards';
+    item.style.opacity = '0';
+  });
+  setTimeout(function() {
+    var tab = document.getElementById('tab-' + id);
+    if (tab) {
+      tab.querySelectorAll('.reveal').forEach(function(el) { el.classList.remove('visible'); });
+      observeReveals(tab);
+    }
+  }, 30);
+}
+// Désactiver le clic droit
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+// Désactiver la sélection de texte
+document.addEventListener('selectstart', e => e.preventDefault());
+
+// Bloquer Ctrl+S, Ctrl+U (voir source), F12, Ctrl+Shift+I
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'F12' ||
+     (e.ctrlKey && e.key === 'u') ||
+     (e.ctrlKey && e.key === 's') ||
+     (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'C' || e.key === 'J'))) {
+    e.preventDefault();
+  }
+});
+</script>
+</body>
+</html>
