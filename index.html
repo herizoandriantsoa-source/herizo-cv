@@ -296,6 +296,11 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:#f0f2f5;padding:20px
     padding: 12px 24px;
   }
 }
+/* Style pour désactiver le span */
+.cert-tag.disabled {
+    pointer-events: none;          /* Bloque complètement le clic et l'événement onclick */
+    cursor: not-allowed;           /* Change le curseur en icône d'interdiction */
+}
 
 </style>
 </head>
@@ -348,16 +353,39 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:#f0f2f5;padding:20px
 
     <!-- SIDEBAR -->
     <div class="sidebar">
-      <div class="s-block reveal from-left">
-        <div class="s-label">Contact</div>
-        <div style="font-size:12px;display:flex;flex-direction:column;gap:8px">           
-		  <div style="display:flex;gap:6px;align-items:flex-start"><i class="ti ti-phone" style="color:var(--teal);font-size:14px;margin-top:1px"></i><span style="color:var(--text2)">034 74 031 41<br>032 35 348 75</span></div>           
-		  <div style="display:flex;gap:6px;align-items:flex-start"><i class="ti ti-mail" style="color:var(--teal);font-size:14px;margin-top:1px"></i><span style="color:var(--text2);word-break:break-all">herizo.andriantsoa@gmail.com</span></div>           
-		  <div style="display:flex;gap:6px;align-items:flex-start"><i class="ti ti-map-pin" style="color:var(--teal);font-size:14px;margin-top:1px"></i><span style="color:var(--text2)">LOT H86 bis Amorondria<br>Sabotsy Namehana, Antananarivo 103</span></div>         
-		  <div style="display:flex;gap:6px;align-items:flex-start"><i class="ti ti-brand-linkedin" style="color:var(--teal);font-size:14px;margin-top:1px"></i><span style="color:var(--text2);word-break:break-all"><a href="https://linkedin.com" target="_blank" style="color:var(--text2);text-decoration:none">www.linkedin.com/in/herizo-andriantsoa-595582219</a></span></div>
-		</div>
+		<div class="s-block reveal from-left">
+		  <div class="s-label">Contact</div>
+		  <div style="font-size:12px;display:flex;flex-direction:column;gap:8px">           
+			<div style="display:flex;gap:6px;align-items:flex-start">
+			  <i class="ti ti-phone" style="color:var(--teal);font-size:14px;margin-top:1px"></i>
+			  <span style="color:var(--text2)">034 74 031 41<br>032 35 348 75</span>
+			</div>           
+			<div style="display:flex;gap:6px;align-items:flex-start">
+			  <i class="ti ti-mail" style="color:var(--teal);font-size:14px;margin-top:1px"></i>
+			  <span style="color:var(--text2);word-break:break-all">herizo.andriantsoa@gmail.com</span>
+			</div>           
+			<div style="display:flex;gap:6px;align-items:flex-start">
+			  <i class="ti ti-map-pin" style="color:var(--teal);font-size:14px;margin-top:1px"></i>
+			  <span style="color:var(--text2)">LOT H86 bis Amorondria<br>Sabotsy Namehana, Antananarivo 103</span>
+			</div>
+			
+			<!-- NOUVELLE LIGNE : LE PORTFOLIO -->
+			<div style="display:flex;gap:6px;align-items:flex-start">
+			  <i class="ti ti-world" style="color:var(--teal);font-size:14px;margin-top:1px"></i>
+			  <span style="color:var(--text2);word-break:break-all">
+				<a href="https://herizo-portfolio.pages.dev" target="_blank" style="color:var(--text2);text-decoration:none">herizo-portfolio.pages.dev</a>
+			  </span>
+			</div>
 
-      </div>
+			<!-- LIEN LINKEDIN CORRIGÉ -->
+			<div style="display:flex;gap:6px;align-items:flex-start">
+			  <i class="ti ti-brand-linkedin" style="color:var(--teal);font-size:14px;margin-top:1px"></i>
+			  <span style="color:var(--text2);word-break:break-all">
+				<a href="https://www.linkedin.com/in/herizo-andriantsoa-595582219" target="_blank" style="color:var(--text2);text-decoration:none">linkedin.com/in/herizo-andriantsoa</a>
+			  </span>
+			</div>
+		  </div>
+		</div>
       <div class="s-block reveal from-left" style="transition-delay:.08s">
         <div class="s-label">Langues</div>
         <div class="lang-row"><span class="lang-name">Malagasy</span><span class="lang-lvl">Langue maternelle</span></div>
@@ -428,9 +456,9 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:#f0f2f5;padding:20px
         <div class="section-title reveal from-left"><i class="ti ti-rocket"></i> Réalisations notables</div>
         <div style="display:grid;gap:9px">
           <div class="cert-item reveal from-right" style="transition-delay:.0s"><div class="cert-icon"><i class="ti ti-school"></i></div><div><div class="cert-title">Plateformes pédagogiques : ExcelLab, BureautiqueLab &amp; SmartQuiz (sept. 2026)</div><div class="cert-sub">Exercices Excel chronométrés avec verdict par cellule, dépôt et correction automatique de travaux Word/Excel, quiz générés par IA avec OCR et anti-fraude · IFR Ankadifotsy</div></div></div>
-          <div class="cert-item reveal from-right" style="transition-delay:.05s"><div class="cert-icon"><i class="ti ti-building-hospital"></i></div><div><div class="cert-title">Digitalisation hospitalière HJRA</div><div class="cert-sub">Système d'enregistrement des données liées aux expositions chimiques · Consultant national Santé &amp; Environnement via TECHXPERT</div></div></div>
-          <div class="cert-item reveal from-right" style="transition-delay:.14s"><div class="cert-icon coral"><i class="ti ti-file-invoice"></i></div><div><div class="cert-title">Gestion de cotisation ARO (2021) &amp; Gestion de traite SCREM (2022)</div><div class="cert-sub">Applications de gestion pour compagnies d'assurance et secteur public</div></div></div>
           <div class="cert-item reveal from-right" style="transition-delay:.23s"><div class="cert-icon"><i class="ti ti-users"></i></div><div><div class="cert-title">Application GESTION ÉTUDIANT</div><div class="cert-sub">Conception et développement de bases de données de gestion des étudiants · Lycée SUNBEAM (Ampitatafika), IFR Ankadifotsy, Collège IFARIHY Famonjena &amp; École FJKM VINET Ambohimalaza</div></div></div>
+		  <div class="cert-item reveal from-right" style="transition-delay:.05s"><div class="cert-icon"><i class="ti ti-building-hospital"></i></div><div><div class="cert-title">Digitalisation hospitalière HJRA</div><div class="cert-sub">Système d'enregistrement des données liées aux expositions chimiques · Consultant national Santé &amp; Environnement via TECHXPERT</div></div></div>
+          <div class="cert-item reveal from-right" style="transition-delay:.14s"><div class="cert-icon coral"><i class="ti ti-file-invoice"></i></div><div><div class="cert-title">Gestion de cotisation ARO (2021) &amp; Gestion de traite SCREM (2022)</div><div class="cert-sub">Applications de gestion pour compagnies d'assurance et secteur public</div></div></div>
           <div class="cert-item reveal from-right" style="transition-delay:.32s"><div class="cert-icon coral"><i class="ti ti-map"></i></div><div><div class="cert-title">Digitalisation administrative – Monographies régionales</div><div class="cert-sub">Fianarantsoa &amp; gestion des taxes communales · Secteur public</div></div></div>
         </div>
       </div>
@@ -649,23 +677,23 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:#f0f2f5;padding:20px
             <div class="cert-platform-card">
               <div class="platform-header"><span class="platform-badge" style="background:#7B2D8B">CODESIGNAL</span></div>
               <div class="cert-subgroup">
-                <div class="cert-subgroup-title" onclick="openCertModal('photo/CODESIGNAL Comprehensive Introduction to Front-End Engineering.png')"><i class="ti ti-layout"></i> Front-end engineering</div>
+                <div class="cert-subgroup-title disabled" ><i class="ti ti-layout"></i> Front-end engineering</div>
                   <div class="cert-list">
-					<span class="cert-tag" onclick="openCertModal('photo/CODESIGNAL Introduction to HTML.png')">HTML</span>
-					<span class="cert-tag" onclick="openCertModal('photo/CODESIGNAL Basics of CSS.png')">CSS</span>
-					<span class="cert-tag" onclick="openCertModal('photo/CODESIGAL Introduction to JavaScript for Front-End Engineers.png')">JavaScript</span>
-					<span class="cert-tag" onclick="openCertModal('photo/CODESIGNAL Mastering the DOM API.png')">Mastering the DOM API</span>
-					<span class="cert-tag" onclick="openCertModal('photo/CODESIGNAL Communicating with APIs for Front-End Engineers.png')">APIs for Front-End</span>
-					<span class="cert-tag" onclick="openCertModal('photo/CODESIGNAL Introduction to Responsive Web Development.png')">Responsive Web Development</span>
+					<span class="cert-tag disabled" onclick="openCertModal('photo/CODESIGNAL Introduction to HTML.png')">HTML</span>
+					<span class="cert-tag disabled" onclick="openCertModal('photo/CODESIGNAL Basics of CSS.png')">CSS</span>
+					<span class="cert-tag disabled" onclick="openCertModal('photo/CODESIGAL Introduction to JavaScript for Front-End Engineers.png')">JavaScript</span>
+					<span class="cert-tag disabled" onclick="openCertModal('photo/CODESIGNAL Mastering the DOM API.png')">Mastering the DOM API</span>
+					<span class="cert-tag disabled" onclick="openCertModal('photo/CODESIGNAL Communicating with APIs for Front-End Engineers.png')">APIs for Front-End</span>
+					<span class="cert-tag disabled" onclick="openCertModal('photo/CODESIGNAL Introduction to Responsive Web Development.png')">Responsive Web Development</span>
                   </div>
               </div>
               <div class="cert-subgroup">
-                <div class="cert-subgroup-title" onclick="openCertModal('photo/codesignal Implementing ToDo App with PHP Symfony')"><i class="ti ti-brand-symfony"></i> PHP Symfony</div>
+                <div class="cert-subgroup-title disabled" ><i class="ti ti-brand-symfony"></i> PHP Symfony</div>
 				   <div class="cert-list">
-					  <span class="cert-tag" onclick="openCertModal('photo/CODESIGNAL Symfony Basics.png')">Symfony Basics</span>
-					  <span class="cert-tag" onclick="openCertModal('photo/CODESIGNAL Using REST API to Build ToDo App with Symfony.png')">REST API with Symfony</span>
-					  <span class="cert-tag" onclick="openCertModal('photo/CODESIGNAL Adding Enterprise Features to your Symfony App.png')">Symfony Enterprise</span>
-					  <span class="cert-tag" onclick="openCertModal('photo/codesignal Securing Your Symfony App.png')">Securing</span>
+					  <span class="cert-tag disabled" onclick="openCertModal('photo/CODESIGNAL Symfony Basics.png')">Symfony Basics</span>
+					  <span class="cert-tag disabled" onclick="openCertModal('photo/CODESIGNAL Using REST API to Build ToDo App with Symfony.png')">REST API with Symfony</span>
+					  <span class="cert-tag disabled" onclick="openCertModal('photo/CODESIGNAL Adding Enterprise Features to your Symfony App.png')">Symfony Enterprise</span>
+					  <span class="cert-tag disabled" onclick="openCertModal('photo/codesignal Securing Your Symfony App.png')">Securing</span>
 				   </div>
               </div>
             </div>
@@ -674,14 +702,14 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:#f0f2f5;padding:20px
             <div class="cert-platform-card">
               <div class="platform-header"><span class="platform-badge" style="background:#F26522">SIMPLILEARN</span></div>
               <div class="cert-list">
-                <span class="cert-tag" onclick="openCertModal('photo/SIMPLILEARN Web Designing Basics.jpg')">Web Designing Basics</span>
-                <span class="cert-tag" onclick="openCertModal('photo/SIMPLILEARN Introduction to Front End Development.jpg')">Front End Development</span>
-                <span class="cert-tag" onclick="openCertModal('photo/SIMPLILEARN Full-Stack Development 101.jpg')">Full-Stack Development</span>
-                <span class="cert-tag" onclick="openCertModal('photo/SIMPLILEARN Python for Beginners.jpg')">Python for Beginners</span>
-                <span class="cert-tag" onclick="openCertModal('photo/SIMPLILEARN Python Pandas Basics Course.jpg')">Python Pandas Basics</span>
-                <span class="cert-tag" onclick="openCertModal('photo/SIMPLILEARN ReactJS for Beginners.jpg')">ReactJS for Beginners</span>
-                <span class="cert-tag" onclick="openCertModal('photo/SIMPLILEARN Getting Started with ReactJS Components.jpg')">ReactJS Components</span>
-                <span class="cert-tag" onclick="openCertModal('photo/SIMPLILEARN Introduction to Computer Networking.jpg')">Computer Networking</span>
+                <span class="cert-tag disabled" onclick="openCertModal('photo/SIMPLILEARN Web Designing Basics.jpg')">Web Designing Basics</span>
+                <span class="cert-tag disabled" onclick="openCertModal('photo/SIMPLILEARN Introduction to Front End Development.jpg')">Front End Development</span>
+                <span class="cert-tag disabled" onclick="openCertModal('photo/SIMPLILEARN Full-Stack Development 101.jpg')">Full-Stack Development</span>
+                <span class="cert-tag disabled" onclick="openCertModal('photo/SIMPLILEARN Python for Beginners.jpg')">Python for Beginners</span>
+                <span class="cert-tag disabled" onclick="openCertModal('photo/SIMPLILEARN Python Pandas Basics Course.jpg')">Python Pandas Basics</span>
+                <span class="cert-tag disabled" onclick="openCertModal('photo/SIMPLILEARN ReactJS for Beginners.jpg')">ReactJS for Beginners</span>
+                <span class="cert-tag disabled" onclick="openCertModal('photo/SIMPLILEARN Getting Started with ReactJS Components.jpg')">ReactJS Components</span>
+                <span class="cert-tag disabled" onclick="openCertModal('photo/SIMPLILEARN Introduction to Computer Networking.jpg')">Computer Networking</span>
               </div>
             </div>
 
@@ -689,7 +717,7 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:#f0f2f5;padding:20px
             <div class="cert-platform-card">
               <div class="platform-header"><span class="platform-badge teal">SYMFONYCASTS</span></div>
               <div class="cert-list">
-                <span class="cert-tag" onclick="openCertModal('photo/SYMFONY CASTS Cosmic coding with symfony 7.jpg')">Cosmic Coding with Symfony 7</span>
+                <span class="cert-tag disabled" onclick="openCertModal('photo/SYMFONY CASTS Cosmic coding with symfony 7.jpg')">Cosmic Coding with Symfony 7</span>
               </div>
             </div>
 
@@ -697,8 +725,8 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:#f0f2f5;padding:20px
             <div class="cert-platform-card">
               <div class="platform-header"><span class="platform-badge gray">MINDLUSTER</span></div>
               <div class="cert-list">
-                <span class="cert-tag" onclick="openCertModal('photo/MINDLUSTER Symfony professionalism.jpg')">Symfony Professionalism</span>
-                <span class="cert-tag" onclick="openCertModal('photo/Mindluster advanced SQL Programming.jpg')">Advanced SQL Programming</span>
+                <span class="cert-tag disabled" onclick="openCertModal('photo/MINDLUSTER Symfony professionalism.jpg')">Symfony Professionalism</span>
+                <span class="cert-tag disabled" onclick="openCertModal('photo/Mindluster advanced SQL Programming.jpg')">Advanced SQL Programming</span>
               </div>
             </div>
 
@@ -706,11 +734,11 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:#f0f2f5;padding:20px
             <div class="cert-platform-card">
               <div class="platform-header"><span class="platform-badge coral2">CURSA</span></div>
               <div class="cert-list">
-                <span class="cert-tag" onclick="openCertModal('photo/CURSA CERTIFICAT front end.png')">Développement Front-end</span>
-                <span class="cert-tag" onclick="openCertModal('photo/CURSA CERTIFICAT BD sql.png','photo/CURSA CERTIFICAT Mysql.png')">SQL &amp; MySQL (Avancé)</span>
-                <span class="cert-tag" onclick="openCertModal('photo/CURSA CERTIFICAT excel.png')">Excel</span>
-                <span class="cert-tag" onclick="openCertModal('photo/CURSA certificat ACCESS.png')">MS Access</span>
-                <span class="cert-tag" onclick="openCertModal('photo/CURSA  certificat SE.png')">S.E.</span>
+                <span class="cert-tag disabled" onclick="openCertModal('photo/CURSA CERTIFICAT front end.png')">Développement Front-end</span>
+                <span class="cert-tag disabled" onclick="openCertModal('photo/CURSA CERTIFICAT BD sql.png','photo/CURSA CERTIFICAT Mysql.png')">SQL &amp; MySQL (Avancé)</span>
+                <span class="cert-tag disabled" onclick="openCertModal('photo/CURSA CERTIFICAT excel.png')">Excel</span>
+                <span class="cert-tag disabled" onclick="openCertModal('photo/CURSA certificat ACCESS.png')">MS Access</span>
+                <span class="cert-tag disabled" onclick="openCertModal('photo/CURSA  certificat SE.png')">S.E.</span>
               </div>
             </div>
 
@@ -718,8 +746,8 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:#f0f2f5;padding:20px
             <div class="cert-platform-card">
               <div class="platform-header"><span class="platform-badge" style="background:#7B2D8B">FUTURE LEARN</span></div>
               <div class="cert-list">
-                <span class="cert-tag" onclick="openCertModal('photo/FUTURELEARN artificial intelligence.jpg')">Digital Skills: AI</span>
-                <span class="cert-tag" onclick="openCertModal('photo/FUTURELEARN digital-skill-web-analytics.jpg')">Digital Skills: Web Analytics</span>
+                <span class="cert-tag disabled" onclick="openCertModal('photo/FUTURELEARN artificial intelligence.jpg')">Digital Skills: AI</span>
+                <span class="cert-tag disabled" onclick="openCertModal('photo/FUTURELEARN digital-skill-web-analytics.jpg')">Digital Skills: Web Analytics</span>
               </div>
             </div>
 
@@ -735,9 +763,9 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:#f0f2f5;padding:20px
             <div class="cert-platform-card">
               <div class="platform-header"><span class="platform-badge coral">AIIXX</span></div>
               <div class="cert-list">
-                <span class="cert-tag" onclick="openCertModal('photo/AI IXX Prompt Engineering.jpg')">Prompt Engineering AI</span>
-                <span class="cert-tag" onclick="openCertModal('photo/AI IXX Synthesia.jpg')">Synthesia AI</span>
-                <span class="cert-tag" onclick="openCertModal('photo/AI IXX How to Write Killer Content with AI.jpg')">Killer Content with AI</span>
+                <span class="cert-tag disabled" onclick="openCertModal('photo/AI IXX Prompt Engineering.jpg')">Prompt Engineering AI</span>
+                <span class="cert-tag disabled" onclick="openCertModal('photo/AI IXX Synthesia.jpg')">Synthesia AI</span>
+                <span class="cert-tag disabled" onclick="openCertModal('photo/AI IXX How to Write Killer Content with AI.jpg')">Killer Content with AI</span>
               </div>
             </div>
 
@@ -745,11 +773,11 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:#f0f2f5;padding:20px
             <div class="cert-platform-card">
               <div class="platform-header"><span class="platform-badge coral">UNIATHENA</span></div>
               <div class="cert-list">
-                <span class="cert-tag" onclick="openCertModal('photo/UNIATHENA certificate Basics of Data Science.jpg')">Data Science</span>
-                <span class="cert-tag" onclick="openCertModal('photo/UNIATHENA certificate Basics of Artificial Intelligence Learnings Models.jpg')">Intelligence Artificielle</span>
-                <span class="cert-tag" onclick="openCertModal('photo/UNIATHENA certificate Basics of Machine Learning.jpg')">Machine Learning</span>
-                <span class="cert-tag" onclick="openCertModal('photo/UNIATHENA certificate sql aggregate functions & joins.jpg','photo/UNIATHENA certificate sql statements & index.jpg','photo/UNIATHENA certificate sql stored procedures.jpg','photo/UNIATHENA certificate Essentials of Data Visualization using MS Excel.jpg')">SQL Avancé &amp; Data Viz</span>
-                <span class="cert-tag" onclick="openCertModal('photo/UNIATHENA certificate Essentials of MS Excel - Formulas.jpg')">MS Excel</span>
+                <span class="cert-tag disabled" onclick="openCertModal('photo/UNIATHENA certificate Basics of Data Science.jpg')">Data Science</span>
+                <span class="cert-tag disabled" onclick="openCertModal('photo/UNIATHENA certificate Basics of Artificial Intelligence Learnings Models.jpg')">Intelligence Artificielle</span>
+                <span class="cert-tag disabled" onclick="openCertModal('photo/UNIATHENA certificate Basics of Machine Learning.jpg')">Machine Learning</span>
+                <span class="cert-tag disabled" onclick="openCertModal('photo/UNIATHENA certificate sql aggregate functions & joins.jpg','photo/UNIATHENA certificate sql statements & index.jpg','photo/UNIATHENA certificate sql stored procedures.jpg','photo/UNIATHENA certificate Essentials of Data Visualization using MS Excel.jpg')">SQL Avancé &amp; Data Viz</span>
+                <span class="cert-tag disabled" onclick="openCertModal('photo/UNIATHENA certificate Essentials of MS Excel - Formulas.jpg')">MS Excel</span>
               </div>
             </div>
 
@@ -757,10 +785,10 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:#f0f2f5;padding:20px
             <div class="cert-platform-card">
               <div class="platform-header"><span class="platform-badge" style="background:#0096D6">HP LIFE</span></div>
               <div class="cert-list">
-                <span class="cert-tag" onclick="openCertModal('photo/HP LIFE IA pour les debutants.jpg','photo/HP LIFE La pensee critique a ere de IA.jpg','photo/HP LIFE IA pour les professionnels.jpg')">L'IA débutants/professionnels/Pensée critique</span>
-                <span class="cert-tag" onclick="openCertModal('photo/HP LIFE informatique au service de mon entreprise.jpg')">Informatique &amp; Entreprise</span>
-                <span class="cert-tag" onclick="openCertModal('photo/HP LIFE Reseautage professionnel pour evolution de carriere.jpg')">Réseautage professionnel</span>
-				<span class="cert-tag" onclick="openCertModal('photo/HP LIFE Sciences et analyses des donnees.jpg')">Sciences &amp; Analyse des données</span>
+                <span class="cert-tag disabled" onclick="openCertModal('photo/HP LIFE IA pour les debutants.jpg','photo/HP LIFE La pensee critique a ere de IA.jpg','photo/HP LIFE IA pour les professionnels.jpg')">L'IA débutants/professionnels/Pensée critique</span>
+                <span class="cert-tag disabled" onclick="openCertModal('photo/HP LIFE informatique au service de mon entreprise.jpg')">Informatique &amp; Entreprise</span>
+                <span class="cert-tag disabled" onclick="openCertModal('photo/HP LIFE Reseautage professionnel pour evolution de carriere.jpg')">Réseautage professionnel</span>
+				<span class="cert-tag disabled" onclick="openCertModal('photo/HP LIFE Sciences et analyses des donnees.jpg')">Sciences &amp; Analyse des données</span>
               </div>
             </div>
 
@@ -768,7 +796,7 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:#f0f2f5;padding:20px
             <div class="cert-platform-card">
               <div class="platform-header"><span class="platform-badge" style="background:#2EC866">HACKERRANK</span></div>
               <div class="cert-list">
-                <span class="cert-tag" onclick="openCertModal('photo/HACKERRANK sql_advanced certificate.jpg')">SQL Advanced</span>
+                <span class="cert-tag disabled" onclick="openCertModal('photo/HACKERRANK sql_advanced certificate.jpg')">SQL Advanced</span>
               </div>
             </div>
 
@@ -776,21 +804,21 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:#f0f2f5;padding:20px
             <div class="cert-platform-card">
               <div class="platform-header"><span class="platform-badge" style="background:#F26522">SIMPLILEARN – IA</span></div>
               <div class="cert-list">
-                <span class="cert-tag" onclick="openCertModal('photo/SIMPLILEARN Prompt Engineering Applications.jpg')">Prompt Engineering Applications</span>
+                <span class="cert-tag disabled" onclick="openCertModal('photo/SIMPLILEARN Prompt Engineering Applications.jpg')">Prompt Engineering Applications</span>
               </div>
             </div>
 			<!-- EDUCOURSE -->
             <div class="cert-platform-card">
               <div class="platform-header"><span class="platform-badge coral">EDUCOURSE</span></div>
               <div class="cert-list">
-                <span class="cert-tag" onclick="openCertModal('photo/EDUCOURSE IAAutomation.jpg')">IA Automation</span>
+                <span class="cert-tag disabled" onclick="openCertModal('photo/EDUCOURSE IAAutomation.jpg')">IA Automation</span>
               </div>
             </div>
 			<!-- MINDLUSTER -->
             <div class="cert-platform-card">
               <div class="platform-header"><span class="platform-badge gray">MINDLUSTER</span></div>
               <div class="cert-list">
-                <span class="cert-tag" onclick="openCertModal('photo/Mindluster Generative AI and prompt engineering')">AI Generative and prompt engineering</span>
+                <span class="cert-tag disabled" onclick="openCertModal('photo/Mindluster Generative AI and prompt engineering')">AI Generative and prompt engineering</span>
               </div>
             </div>
           </div>
@@ -804,26 +832,26 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:#f0f2f5;padding:20px
             <div class="cert-platform-card">
               <div class="platform-header"><span class="platform-badge" style="background:#1BA0D7">CISCO ACADEMY</span></div>
               <div class="cert-list">
-                <span class="cert-tag" onclick="openCertModal('photo/CISCO ACADEMY  Networking_Basics.jpg')">Networking Basics</span>
-                <span class="cert-tag" onclick="openCertModal('photo/CISCO ACADEMY Network_Addressing_and_Basic_Troubleshooting.jpg')">Network Addressing/Troubleshooting</span>
+                <span class="cert-tag disabled" onclick="openCertModal('photo/CISCO ACADEMY  Networking_Basics.jpg')">Networking Basics</span>
+                <span class="cert-tag disabled" onclick="openCertModal('photo/CISCO ACADEMY Network_Addressing_and_Basic_Troubleshooting.jpg')">Network Addressing/Troubleshooting</span>
               </div>
             </div>
 
             <div class="cert-platform-card">
               <div class="platform-header"><span class="platform-badge" style="background:#FF9900;color:#000">AWS</span></div>
               <div class="cert-list">
-                <span class="cert-tag" onclick="openCertModal('photo/AWS Amazon RDS for SQL Server.jpg')">Amazon RDS for SQL Server</span>
+                <span class="cert-tag disabled" onclick="openCertModal('photo/AWS Amazon RDS for SQL Server.jpg')">Amazon RDS for SQL Server</span>
               </div>
             </div>
 
             <div class="cert-platform-card">
               <div class="platform-header"><span class="platform-badge gray">SAYLOR ACADEMY</span></div>
               <div class="cert-list">
-                <span class="cert-tag" onclick="openCertModal('photo/SAYLOR academy certifcat Computer Architecture.jpg')">Computer Architecture</span>
-				<span class="cert-tag" onclick="openCertModal('photo/saylor  academy Management Information Systems.jpg')">Management Information Systems</span>
-                <span class="cert-tag" onclick="openCertModal('photo/SAYLOR academy certifcat Computer Communications and Networks.jpg')">Computer Communications &amp; Networks</span>
-                <span class="cert-tag" onclick="openCertModal('photo/SAYLOR academy certifcat Modern Database Systems.jpg')">Modern Database Systems</span>
-                <span class="cert-tag" onclick="openCertModal('photo/SAYLOR academy certifcat Software Engineering.jpg')">Software Engineering</span>
+                <span class="cert-tag disabled" onclick="openCertModal('photo/SAYLOR academy certifcat Computer Architecture.jpg')">Computer Architecture</span>
+				<span class="cert-tag disabled" onclick="openCertModal('photo/saylor  academy Management Information Systems.jpg')">Management Information Systems</span>
+                <span class="cert-tag disabled" onclick="openCertModal('photo/SAYLOR academy certifcat Computer Communications and Networks.jpg')">Computer Communications &amp; Networks</span>
+                <span class="cert-tag disabled" onclick="openCertModal('photo/SAYLOR academy certifcat Modern Database Systems.jpg')">Modern Database Systems</span>
+                <span class="cert-tag disabled" onclick="openCertModal('photo/SAYLOR academy certifcat Software Engineering.jpg')">Software Engineering</span>
                 
               </div>
             </div>
@@ -835,27 +863,25 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:#f0f2f5;padding:20px
         <div class="cert-group anim" style="animation-delay:.21s">
           <div class="cert-group-title2">
             <i class="ti ti-rosette"></i> Badges Microsoft
-            <span class="btn-voir-photos" onclick="openCertModal('photo/Microsoft Learn IA pour les enseignants.jpg','photo/Microsoft Learn Leadership dans lespace de travail moderne.jpg','photo/Microsoft Learn Microsoft Educator Academy.jpg','photo/Microsoft Learn Preparer des donnees a des fins danalyse avec Power BI.jpg','photo/Microsoft Learn Presentation de linfrastructure cloud.jpg','photo/Microsoft Learn Prise en main de lAnalytique donnees Microsoft.jpg')">
-              <i class="ti ti-photo" style="font-size:12px"></i> Voir badges
-            </span>
+            
           </div>
           <div class="cert-group-grid">
             <div class="cert-platform-card">
               <div class="platform-header"><span class="platform-badge coral2">Leadership &amp; Espace de travail</span></div>
               <div class="cert-list">
-                <span class="cert-tag">- Leadership pédagogique<br>- Direction de l'organisation<br>- Leadership culturel inclusif<br>- Leadership stratégique<br>- Conception apprentissage 21e siècle</span>
+                <span class="cert-tag disabled">- Leadership pédagogique<br>- Direction de l'organisation<br>- Leadership culturel inclusif<br>- Leadership stratégique<br>- Conception apprentissage 21e siècle</span>
               </div>
             </div>
             <div class="cert-platform-card">
               <div class="platform-header"><span class="platform-badge coral2">IA pour les enseignants</span></div>
               <div class="cert-list">
-                <span class="cert-tag">- Microsoft 365 Copilot Chat<br>- Outils IA Microsoft pour apprenant<br>- IA gratuits Microsoft Éducation<br>- otentiel de l'IA pour enseignants</span>
+                <span class="cert-tag disabled">- Microsoft 365 Copilot Chat<br>- Outils IA Microsoft pour apprenant<br>- IA gratuits Microsoft Éducation<br>- otentiel de l'IA pour enseignants</span>
               </div>
             </div>
             <div class="cert-platform-card">
               <div class="platform-header"><span class="platform-badge coral2">Microsoft Educator Academy</span></div>
               <div class="cert-list">
-                <span class="cert-tag">- Apprentissage inclusif<br>- Salle de classe inclusive<br>- Microsoft Teams Éducation<br>- PowerPoint Recorder<br>- OneNote pour l'éducation</span>
+                <span class="cert-tag disabled">- Apprentissage inclusif<br>- Salle de classe inclusive<br>- Microsoft Teams Éducation<br>- PowerPoint Recorder<br>- OneNote pour l'éducation</span>
               </div>
             </div>
             <div class="cert-platform-card">
@@ -864,14 +890,14 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:#f0f2f5;padding:20px
 			  <div class="cert-subgroup">
 				<div class="cert-subgroup-title"><i class="ti ti-chart-bar"></i> Power BI</div>
 				<div class="cert-list">
-				  <span class="cert-tag">- Analyse de données<br>- Créer avec Power BI<br>- États interactifs &amp; Copilot<br>- Obtenir &amp; transformer des données<br>- Framework de modèle</span>
+				  <span class="cert-tag disabled">- Analyse de données<br>- Créer avec Power BI<br>- États interactifs &amp; Copilot<br>- Obtenir &amp; transformer des données<br>- Framework de modèle</span>
 				</div>
 			  </div>
 
 			  <div class="cert-subgroup">
 				<div class="cert-subgroup-title"><i class="ti ti-layers"></i> Microsoft Fabric</div>
 				<div class="cert-list">
-				  <span class="cert-tag">- Analytique bout en bout</span>
+				  <span class="cert-tag disabled">- Analytique bout en bout</span>
 				</div>
 			  </div>
 
@@ -879,7 +905,7 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:#f0f2f5;padding:20px
             <div class="cert-platform-card">
               <div class="platform-header"><span class="platform-badge coral2">Infrastructure Cloud</span></div>
               <div class="cert-list">
-                <span class="cert-tag">- Décrire le cloud computing<br>- Avantages des services cloud<br>- Types de services cloud</span>
+                <span class="cert-tag disabled">- Décrire le cloud computing<br>- Avantages des services cloud<br>- Types de services cloud</span>
               </div>
             </div>
           </div>
@@ -889,33 +915,31 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:#f0f2f5;padding:20px
         <div class="cert-group anim" style="animation-delay:.27s">
           <div class="cert-group-title2">
             <i class="ti ti-rosette"></i> Badges Intel Educator 4.0
-            <span class="btn-voir-photos" onclick="openCertModal('photo/INTEL Level 1 Adapter of Technology.jpg','photo/INTEL LEVEL 2 Course 1 - Introduction to Learning Remotely.jpg','photo/INTEL LEVEL 2 Course 2 - Establishing Effective Educator-Machine Partnerships.jpg','photo/INTEL LEVEL 2 Course 3 - Fostering Student Engagement in the Age of Digital Distraction.jpg','photo/INTEL LEVEL 2 Course 4 - Strengthening Real World Relevance in the Classroom.jpg','photo/INTEL LEVEL 3 Course 1 - Analytical Thinking Through Data.jpg','photo/INTEL LEVEL 3 Course 2 - Critical Reasoning to Make Better Decisions.jpg','photo/INTEL LEVEL 3 Course 3 - Bridging the Creativity Gap.jpg')">
-              <i class="ti ti-photo" style="font-size:12px"></i> Voir badges
-            </span>
+            
           </div>
           <div class="cert-group-grid">
             <div class="cert-platform-card">
 			  <div class="platform-header"><span class="platform-badge" style="background:#0068B5">LEVEL 1 – Adapter of Technology</span></div>
 			  <div class="cert-list">
-				<span class="cert-tag">- Technology in the Classroom<br>- Computer &amp; Internet Basics<br>- Multimedia &amp; Video<br>- Word Processing &amp; Spreadsheets<br>- Collaborative Workspaces</span>
+				<span class="cert-tag disabled">- Technology in the Classroom<br>- Computer &amp; Internet Basics<br>- Multimedia &amp; Video<br>- Word Processing &amp; Spreadsheets<br>- Collaborative Workspaces</span>
 			  </div>
 			</div>
             <div class="cert-platform-card">
 			  <div class="platform-header"><span class="platform-badge" style="background:#0068B5">LEVEL 2 – Leader of Learning Experiences</span></div>
 			  <div class="cert-list">
-				<span class="cert-tag">- Introduction to Learning Remotely<br>- Educator Machine Partnerships<br>- Student Engagement in Digital Age<br>- Real World Relevance in Classroom</span>
+				<span class="cert-tag disabled">- Introduction to Learning Remotely<br>- Educator Machine Partnerships<br>- Student Engagement in Digital Age<br>- Real World Relevance in Classroom</span>
 			  </div>
 			</div>
             <div class="cert-platform-card">
               <div class="platform-header"><span class="platform-badge" style="background:#0068B5">LEVEL 3 – Catalyst of Creative Confidence</span></div>
               <div class="cert-list">
-                <span class="cert-tag">- Analytical Thinking Through Data<br>- Critical Reasoning &amp; Decisions<br>- Bridging the Creativity Gap</span>
+                <span class="cert-tag disabled">- Analytical Thinking Through Data<br>- Critical Reasoning &amp; Decisions<br>- Bridging the Creativity Gap</span>
               </div>
             </div>
             <div class="cert-platform-card">
               <div class="platform-header"><span class="platform-badge" style="background:#0068B5">LEVEL 4 – Mentor of Upgraded Mindsets</span></div>
               <div class="cert-list">
-                <span class="cert-tag">- Waterfall to Agile Mindset<br>- Operational to Strategic Thinking<br>- Follower to Entrepreneurial Mindset</span>
+                <span class="cert-tag disabled">- Waterfall to Agile Mindset<br>- Operational to Strategic Thinking<br>- Follower to Entrepreneurial Mindset</span>
               </div>
             </div>
           </div>
